@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
   background: var(--page-bg);
   color: var(--text);
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -65,7 +65,7 @@ img {
   justify-content: space-between;
   gap: 18px;
   min-height: 72px;
-  padding: 18px 0 6px;
+  padding: 26px 0 12px;
   font-size: 1.04rem;
   font-weight: 500;
 }
@@ -98,16 +98,16 @@ img {
 }
 
 .hero {
-  padding: 22px 0 36px;
+  padding: 30px 0 44px;
 }
 
 .portrait-frame {
-  width: min(30vw, 350px);
-  max-width: 360px;
-  min-width: 220px;
-  margin-bottom: 34px;
-  border: 3px solid rgba(197, 174, 226, 0.9);
-  border-radius: 26px;
+  width: min(22vw, 260px);
+  max-width: 260px;
+  min-width: 180px;
+  margin-bottom: 38px;
+  border: 5px solid rgba(197, 174, 226, 0.9);
+  border-radius: 28px;
   overflow: hidden;
   background: #f0ecea;
   transform: rotate(-1deg);
@@ -247,7 +247,7 @@ img {
 
 .site-footer {
   background: var(--footer);
-  padding: 52px 0 54px;
+  padding: 56px 0 54px;
 }
 
 .site-footer h2 {
@@ -295,7 +295,7 @@ img {
 
   .site-header {
     flex-wrap: wrap;
-    padding-top: 16px;
+    padding-top: 18px;
     min-height: 62px;
   }
 
@@ -304,7 +304,8 @@ img {
   }
 
   .portrait-frame {
-    width: min(52vw, 270px);
+    width: min(46vw, 240px);
+    border-width: 4px;
     margin-bottom: 26px;
   }
 
@@ -339,7 +340,7 @@ img {
 
   .site-header {
     align-items: flex-start;
-    padding-top: 12px;
+    padding-top: 14px;
   }
 
   .nav {
@@ -359,8 +360,8 @@ img {
   }
 
   .portrait-frame {
-    width: min(64vw, 230px);
-    border-width: 2px;
+    width: min(54vw, 210px);
+    border-width: 4px;
     border-radius: 22px;
     margin-bottom: 22px;
   }
