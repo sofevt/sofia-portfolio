@@ -17,7 +17,8 @@
   --tag-accent: #d4c1ee;
   --white: #ffffff;
   --shadow: rgba(18, 16, 18, 0.06);
-  --container-max: 920px;
+  --container-hero: 1040px;
+  --container-projects: 1200px;
 }
 
 html {
@@ -52,8 +53,9 @@ img {
 }
 
 .site-header,
-.hero {
-  width: min(var(--container-max), calc(100vw - 48px));
+.hero,
+.footer-content {
+  width: min(var(--container-hero), calc(100vw - 48px));
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
@@ -145,17 +147,13 @@ img {
 
 .hero-copy {
   margin: 0;
-  max-width: 900px;
+  max-width: 980px;
   font-size: clamp(2.5rem, 3vw, 5rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 600;
   color: var(--text);
   text-wrap: balance;
-}
-
-.hero-copy br + * {
-  color: var(--lavender);
 }
 
 .arrow {
@@ -168,7 +166,7 @@ img {
 }
 
 .projects-container {
-  width: min(var(--container-max), calc(100vw - 48px));
+  width: min(var(--container-projects), calc(100vw - 48px));
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
@@ -281,11 +279,6 @@ img {
   color: var(--text);
 }
 
-.footer-content {
-  width: min(var(--container-max), calc(100vw - 48px));
-  margin: 0 auto;
-}
-
 .site-footer h2 {
   margin: 0 0 38px;
   font-size: clamp(2.6rem, 4vw, 5rem);
@@ -335,12 +328,13 @@ img {
 
 @media (max-width: 1024px) {
   .site-header,
-  .hero {
-    width: min(100vw - 32px, 900px);
+  .hero,
+  .footer-content {
+    width: min(100vw - 32px, 980px);
   }
 
   .projects-container {
-    width: min(100vw - 32px, 900px);
+    width: min(100vw - 32px, 1200px);
   }
 
   .hero-copy {
@@ -350,7 +344,8 @@ img {
 
 @media (max-width: 768px) {
   :root {
-    --container-max: 100%;
+    --container-hero: 100%;
+    --container-projects: 100%;
   }
 
   .site-header {
