@@ -97,21 +97,14 @@ img {
   align-items: center;
   gap: 3px;
   line-height: 1.1;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 4px;
   transition: opacity 180ms ease, color 180ms ease;
 }
 
 .nav a[href="cv.pdf"] {
   text-decoration: underline;
-  text-decoration-thickness: 1.2px;
-  text-underline-offset: 4px;
-}
-
-.nav a[href^="https://t.me"],
-.nav a[href^="mailto:"] {
-  text-decoration: underline;
-  text-decoration-thickness: 1.2px;
-  text-underline-offset: 4px;
 }
 
 .nav a:hover,
@@ -120,8 +113,9 @@ img {
 }
 
 .hero {
+  min-height: 72vh;
   padding-top: 28px;
-  padding-bottom: 68px;
+  padding-bottom: 96px;
 }
 
 .portrait-frame {
@@ -132,7 +126,7 @@ img {
   border-radius: 28px;
   overflow: hidden;
   background: #f0ecea;
-  transform: rotate(-1deg);
+  transform: rotate(7deg);
   box-shadow: 0 18px 32px rgba(111, 88, 134, 0.08);
 }
 
@@ -156,9 +150,12 @@ img {
   text-wrap: balance;
 }
 
-.arrow {
+.hero-copy .arrow {
   color: var(--lavender);
   text-decoration: none !important;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 0.05em;
 }
 
 .projects-section {
@@ -365,6 +362,7 @@ img {
   }
 
   .hero {
+    min-height: auto;
     padding-top: 24px;
     padding-bottom: 48px;
   }
@@ -429,6 +427,7 @@ img {
   }
 
   .hero {
+    min-height: auto;
     padding-top: 16px;
     padding-bottom: 32px;
   }
