@@ -1,0 +1,396 @@
+/* Case Study Page Styles */
+
+.case-study-main {
+  width: 100%;
+  background: var(--bg);
+}
+
+/* Hero Section */
+.case-hero {
+  width: min(var(--container-hero), calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 68px 24px;
+  background: var(--bg);
+}
+
+.case-hero-content {
+  max-width: 900px;
+}
+
+.case-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.case-breadcrumb a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 180ms ease;
+}
+
+.case-breadcrumb a:hover {
+  opacity: 0.75;
+}
+
+.breadcrumb-sep {
+  color: var(--line);
+}
+
+.case-title {
+  margin: 0 0 24px;
+  font-size: clamp(2.8rem, 4vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-title-arrow {
+  color: var(--lavender);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.case-description {
+  margin: 0 0 32px;
+  max-width: 600px;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+/* Meta Info */
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 32px 0;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Case Tags */
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.case-tags li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+.case-tags li:first-child {
+  background: var(--lavender-soft);
+  border-color: var(--lavender-soft);
+  color: var(--text);
+}
+
+/* Cover Image */
+.case-cover {
+  width: 100%;
+  margin: 68px 0;
+}
+
+.case-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 24px 48px rgba(111, 88, 134, 0.12);
+}
+
+/* Main Content */
+.case-content {
+  width: min(900px, calc(100vw - 48px));
+  margin: 0 auto 96px;
+  padding: 0 24px;
+}
+
+/* Case Sections */
+.case-section {
+  margin-bottom: 68px;
+}
+
+.case-section h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.case-section h3 {
+  margin: 32px 0 16px;
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.case-section p {
+  margin: 0 0 16px;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+.case-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Figures (Images with Captions) */
+.case-figure {
+  margin: 48px 0;
+  padding: 0;
+}
+
+.case-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(111, 88, 134, 0.1);
+  margin-bottom: 12px;
+}
+
+.case-figure figcaption {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 1024px) {
+  .case-hero {
+    padding: 48px 24px;
+  }
+
+  .case-content {
+    width: calc(100vw - 48px);
+  }
+
+  .case-meta {
+    gap: 24px;
+    margin: 24px 0;
+    padding: 24px 0;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+  .case-hero {
+    padding: 32px 16px;
+  }
+
+  .case-hero-content {
+    max-width: 100%;
+  }
+
+  .case-breadcrumb {
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+  }
+
+  .case-title {
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+
+  .case-title-arrow {
+    font-size: 1.8rem;
+  }
+
+  .case-description {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    margin: 0 0 24px;
+  }
+
+  .case-meta {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+    margin: 24px 0;
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+  }
+
+  .meta-value {
+    font-size: 1rem;
+  }
+
+  .case-tags {
+    margin-top: 16px;
+  }
+
+  .case-cover {
+    margin: 48px 0;
+    border-radius: 16px;
+  }
+
+  .case-cover img {
+    border-radius: 16px;
+  }
+
+  .case-content {
+    width: calc(100vw - 32px);
+    margin: 0 auto 48px;
+    padding: 0 16px;
+  }
+
+  .case-section {
+    margin-bottom: 48px;
+  }
+
+  .case-section h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+
+  .case-section h3 {
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    margin: 24px 0 12px;
+  }
+
+  .case-section p {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    line-height: 1.6;
+  }
+
+  .case-figure {
+    margin: 32px 0;
+  }
+
+  .case-figure img {
+    border-radius: 16px;
+    margin-bottom: 8px;
+  }
+
+  .case-figure figcaption {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive: Small Mobile */
+@media (max-width: 430px) {
+  .case-hero {
+    padding: 24px 12px;
+  }
+
+  .case-breadcrumb {
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+  }
+
+  .case-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    margin-bottom: 12px;
+    gap: 6px;
+  }
+
+  .case-title-arrow {
+    font-size: 1.5rem;
+  }
+
+  .case-description {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    margin: 0 0 16px;
+  }
+
+  .case-meta {
+    gap: 12px;
+    padding: 12px 0;
+    margin: 16px 0;
+    font-size: 0.9rem;
+  }
+
+  .case-cover {
+    margin: 32px 0;
+  }
+
+  .case-content {
+    width: calc(100vw - 24px);
+    margin: 0 auto 32px;
+    padding: 0 12px;
+  }
+
+  .case-section {
+    margin-bottom: 36px;
+  }
+
+  .case-section h2 {
+    font-size: clamp(1.4rem, 6vw, 1.9rem);
+    margin-bottom: 12px;
+  }
+
+  .case-section h3 {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    margin: 20px 0 8px;
+  }
+
+  .case-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .case-figure {
+    margin: 24px 0;
+  }
+
+  .case-figure figcaption {
+    font-size: 0.8rem;
+  }
+}
