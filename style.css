@@ -150,12 +150,10 @@ img {
   text-wrap: balance;
 }
 
-.hero-copy .arrow {
+.hero-copy .star {
   color: var(--lavender);
-  text-decoration: none !important;
-  font-weight: 400;
   display: inline-block;
-  margin-left: 0.05em;
+  margin: 0 0.15em;
 }
 
 .projects-section {
@@ -175,7 +173,6 @@ img {
 }
 
 .project-card {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -193,22 +190,6 @@ img {
   outline: 3px solid rgba(255, 255, 255, 0.55);
   outline-offset: 4px;
   border-radius: 6px;
-}
-
-.project-card .project-arrow {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: var(--lavender);
-  font-size: 2.2rem;
-  line-height: 1;
-  pointer-events: none;
 }
 
 .project-visual {
@@ -239,12 +220,27 @@ img {
   padding: 0 2px 8px;
 }
 
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .project-text h2 {
-  margin: 0 0 8px;
+  margin: 0;
+  flex: 1;
   font-size: clamp(1.7rem, 2vw, 2.5rem);
   line-height: 1.08;
   letter-spacing: -0.06em;
   font-weight: 600;
+}
+
+.project-arrow {
+  color: var(--lavender);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .project-text p {
@@ -359,6 +355,10 @@ img {
   .hero-copy {
     max-width: 100%;
   }
+
+  .project-arrow {
+    font-size: clamp(1.6rem, 2.2vw, 2rem);
+  }
 }
 
 @media (max-width: 768px) {
@@ -387,7 +387,7 @@ img {
   .portrait-frame {
     width: 220px;
     height: 220px;
-    border-width: 0;
+    border: none;
     margin-bottom: 32px;
   }
 
@@ -411,12 +411,8 @@ img {
     gap: 24px;
   }
 
-  .project-card .project-arrow {
-    width: 36px;
-    height: 36px;
+  .project-arrow {
     font-size: 1.8rem;
-    right: 12px;
-    top: 12px;
   }
 
   .project-visual {
@@ -472,7 +468,7 @@ img {
   .portrait-frame {
     width: 200px;
     height: 200px;
-    border-width: 0;
+    border: none;
     border-radius: 22px;
     margin-bottom: 22px;
   }
@@ -482,12 +478,8 @@ img {
     letter-spacing: -0.07em;
   }
 
-  .project-card .project-arrow {
-    width: 32px;
-    height: 32px;
-    font-size: 1.5rem;
-    right: 10px;
-    top: 10px;
+  .project-arrow {
+    font-size: 1.6rem;
   }
 
   .project-text h2 {
