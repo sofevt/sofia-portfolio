@@ -195,6 +195,12 @@ img {
   object-position: center;
 }
 
+.project-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .project-text h2 {
   margin: 0 0 12px;
   font-size: 1.5rem;
@@ -202,6 +208,7 @@ img {
   letter-spacing: -0.02em;
   font-weight: 600;
 }
+
 .project-header {
   display: flex;
   align-items: center;
@@ -235,7 +242,7 @@ img {
   font-size: 1.25rem;
   line-height: 1.45;
   letter-spacing: -0.01em;
-  min-height: 2.9em; /* две строки: теги в соседних карточках встают на одной линии */
+  min-height: 0;
 }
 
 .tags {
@@ -243,8 +250,8 @@ img {
   flex-wrap: wrap;
   gap: 8px;
   list-style: none;
-  margin: 20px 0 0;
-  padding: 0;
+  margin: auto 0 0;
+  padding: 20px 0 0;
 }
 
 .tags li {
