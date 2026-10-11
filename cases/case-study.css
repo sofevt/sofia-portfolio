@@ -3,15 +3,19 @@
    токены (--text, --lavender, --dark, --pad-x и т. д.).
    ========================================================== */
 :root {
-  --muted: rgba(27, 27, 25, 0.8);
-  --muted-soft: rgba(27, 27, 25, 0.5);
-  --line: rgba(27, 27, 25, 0.12);
-  --surface: #f4f1f9; /* фон под картинками */
+  --body: #2b2b29; /* основной текст, темнее прежнего серого */
+  --muted-soft: rgba(27, 27, 25, 0.55);
+  --line: rgba(27, 27, 25, 0.14);
+  --line-strong: rgba(27, 27, 25, 0.22);
   --lavender-soft: #e7dcf7;
+
+  --rail: 200px; /* ширина колонки с содержанием */
+  --rail-gap: 64px;
+  --content: 780px; /* максимальная ширина колонки с контентом */
 }
 
 html {
-  scroll-padding-top: 24px;
+  scroll-padding-top: 32px;
 }
 
 .case-wrap {
@@ -26,7 +30,7 @@ html {
    Шапка кейса
    ========================================================== */
 .case-hero {
-  padding: 64px 0 48px;
+  padding: 56px 0 40px;
 }
 
 .case-hero-grid {
@@ -50,13 +54,12 @@ html {
   font-size: clamp(1.25rem, 1.9vw, 1.5rem);
   line-height: 1.4;
   letter-spacing: -0.01em;
-  color: var(--muted);
+  color: var(--body);
 }
 
-/* таблица свойств в духе Notion */
+/* таблица свойств в духе Notion: линии только между строками */
 .case-props {
   margin: 0;
-  border-top: 1px solid var(--line);
 }
 
 .case-props > div {
@@ -68,6 +71,10 @@ html {
   border-bottom: 1px solid var(--line);
 }
 
+.case-props > div:last-child {
+  border-bottom: 0;
+}
+
 .case-props dt {
   font-size: 0.9375rem;
   color: var(--muted-soft);
@@ -77,12 +84,6 @@ html {
   margin: 0;
   font-weight: 500;
   line-height: 1.4;
-}
-
-.case-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
 }
 
 .case-links a {
@@ -110,7 +111,7 @@ html {
   align-items: center;
   min-height: 32px;
   padding: 0 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -122,38 +123,106 @@ html {
   border-color: var(--lavender);
 }
 
-/* ==========================================================
-   Содержание
-   ========================================================== */
-.case-toc {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin: 40px 0 56px;
+.case-figure--hero {
+  margin: 16px 0 0;
 }
 
-.case-toc-label {
-  margin-right: 8px;
-  font-size: 0.9375rem;
+.case-figure--hero img {
+  width: 100%;
+}
+
+/* ==========================================================
+   Видео
+   ========================================================== */
+.case-video {
+  padding: 0 var(--pad-x);
+  margin: 72px auto 0;
+  max-width: 1440px;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-caption {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: var(--muted-soft);
 }
 
+/* ==========================================================
+   Каркас: слева липкое содержание, справа контент
+   ========================================================== */
+.case-layout {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, var(--content));
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-top: 88px;
+}
+
+.case-rail {
+  position: sticky;
+  top: 32px;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+.toc-title {
+  margin: 0 0 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+}
+
+.case-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .case-toc a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  display: block;
+  padding: 5px 0 5px 12px;
+  border-left: 2px solid transparent;
   font-size: 0.9375rem;
-  font-weight: 500;
-  transition: background 180ms ease, border-color 180ms ease;
+  line-height: 1.35;
+  color: var(--muted-soft);
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.case-toc ol ol a {
+  padding-left: 26px;
+  font-size: 0.875rem;
 }
 
 .case-toc a:hover {
-  background: var(--lavender-soft);
-  border-color: var(--lavender-soft);
+  color: var(--text);
+}
+
+.case-toc a.is-active {
+  color: var(--text);
+  font-weight: 600;
+  border-left-color: var(--lavender);
 }
 
 .case-toc a:focus-visible,
@@ -161,96 +230,71 @@ html {
 .case-back:focus-visible {
   outline: 3px solid rgba(27, 27, 25, 0.55);
   outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* ==========================================================
-   Секции: заголовок слева, текст справа, картинки на всю ширину
+   Секции и типографика
    ========================================================== */
 .case-section {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  column-gap: 40px;
-  row-gap: 32px;
-  padding: 64px 0;
-  border-top: 1px solid var(--line);
+  margin-bottom: 88px;
+  scroll-margin-top: 32px;
 }
 
-.case-section > h2,
-.case-section > h3 {
-  grid-column: 1;
-  margin: 0;
+.case-section--group {
+  margin-bottom: 40px;
+}
+
+.case-section--sub {
+  margin-bottom: 80px;
+}
+
+.case-content h2,
+.band-grid h2 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  line-height: 1.15;
   letter-spacing: -0.03em;
   font-weight: 600;
 }
 
-.case-section > h2 {
-  font-size: 1.75rem;
-  line-height: 1.15;
-}
-
-.case-section > h3 {
-  font-size: 1.375rem;
+.case-content h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
   line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 600;
 }
 
-.case-section > .prose,
-.case-section > .video-frame {
-  grid-column: 2;
+.case-content h3:not(:first-child) {
+  margin-top: 56px;
 }
 
-.case-section > .case-figure,
-.case-section > .fig-pair,
-.case-section > .group-grid {
-  grid-column: 1 / -1;
-}
-
-.case-section--intro {
-  padding-bottom: 32px;
-}
-
-.case-section--sub {
-  padding: 48px 0;
-}
-
-.case-section--plain {
-  padding: 0;
-  border-top: 0;
-}
-
-/* ==========================================================
-   Текст
-   ========================================================== */
-.prose {
-  max-width: 720px;
-}
-
-.prose p {
-  margin: 0 0 1.1em;
-  font-size: 1.125rem;
-  line-height: 1.7;
+.case-content p,
+.band-body p {
+  max-width: 640px;
+  margin: 0 0 1em;
+  font-size: 1.0625rem;
+  line-height: 1.6;
   letter-spacing: -0.005em;
-  color: var(--muted);
+  color: var(--body);
 }
 
-.prose p:last-child {
+.case-content p:last-child {
   margin-bottom: 0;
 }
 
-.prose strong {
+.case-content strong {
   font-weight: 600;
   color: var(--text);
 }
 
-.prose h3 {
-  margin: 40px 0 12px;
+.case-content .lead {
   font-size: 1.375rem;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-}
-
-.prose h3:first-child {
-  margin-top: 0;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  color: var(--text);
 }
 
 .step-label {
@@ -265,229 +309,227 @@ html {
   vertical-align: middle;
 }
 
-.checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 32px;
-  margin: 24px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.checks li {
-  position: relative;
-  padding-left: 22px;
-  font-size: 1.0625rem;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-.checks li::before {
-  content: "";
-  position: absolute;
-  top: 0.6em;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--lavender);
-}
-
-.prose .statement {
-  margin: 32px 0;
-  padding-left: 24px;
-  border-left: 4px solid var(--lavender);
-  font-size: 1.5rem;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.prose .statement strong {
-  font-weight: 700;
-}
-
+/* выноски: только обводка, без фона */
 .callout {
   display: flex;
-  gap: 16px;
-  margin-top: 32px;
-  padding: 20px 24px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: var(--surface);
+  gap: 14px;
+  margin-top: 28px;
+  padding: 18px 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
 }
 
 .callout p {
   margin: 0;
+  font-size: 1rem;
 }
 
 .callout-icon {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   line-height: 1.5;
 }
 
 .callout--stack {
   display: block;
-  margin-top: 0;
+  margin-top: 40px;
 }
 
-.callout--stack h3 {
-  margin: 0 0 12px;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
+.case-content .callout--stack h3 {
+  margin: 0 0 10px;
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
 }
 
 .callout--stack p {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.7em;
 }
 
 .callout--stack p:last-child {
   margin-bottom: 0;
 }
 
-.group-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
+/* список функций чипами */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.group-card {
-  grid-column: span 2;
-  padding: 24px;
-  border-radius: 20px;
-  background: var(--surface);
+.chips li {
+  padding: 9px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text);
 }
 
-.group-card:nth-child(n + 4) {
-  grid-column: span 3;
+/* «Главный вызов» */
+.challenge {
+  margin: 56px 0;
 }
 
-.group-icon {
-  display: block;
-  margin-bottom: 16px;
-  font-size: 2rem;
-  line-height: 1;
+.challenge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
 }
 
-.group-card p {
-  margin: 0;
-  font-size: 1.0625rem;
-  line-height: 1.5;
-  color: var(--muted);
+.challenge-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lavender);
 }
 
-.group-card strong {
+.case-content .challenge p {
+  max-width: 600px;
+  margin: 14px 0 0;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   font-weight: 600;
   color: var(--text);
 }
 
-/* ==========================================================
-   Видео
-   ========================================================== */
-.video-frame {
-  position: relative;
-  width: 100%;
-  max-width: 760px;
-  aspect-ratio: 16 / 9;
-  border-radius: 24px;
-  overflow: hidden;
-  background: var(--dark);
+.challenge mark {
+  padding: 0 2px;
+  background: linear-gradient(transparent 58%, var(--lavender-soft) 58%);
+  color: inherit;
 }
 
-.video-frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+/* группы функций: карточки с обводкой */
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.group-card {
+  padding: 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+}
+
+.group-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.group-icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.case-content .group-card p {
+  max-width: none;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ==========================================================
-   Картинки
+   Картинки: без подложек, по центру колонки
    ========================================================== */
 .case-figure {
-  margin: 0;
+  margin: 40px 0 0;
 }
 
-.fig-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(24px, 4vw, 64px);
-  padding: clamp(24px, 4vw, 56px) clamp(16px, 3vw, 48px);
-  border-radius: 28px;
-  background: var(--surface);
-}
-
-.fig-panel img {
+.case-figure img {
   display: block;
-  flex: 0 1 auto;
-  min-width: 0;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
   cursor: zoom-in;
 }
 
-.fig-panel--hero {
-  padding: clamp(20px, 3.5vw, 48px);
-  background: linear-gradient(135deg, #ece4f9 0%, #dccff1 100%);
-}
-
-.fig-panel--ia img {
-  width: min(100%, 780px);
-}
-
 .case-figure figcaption {
-  margin-top: 14px;
-  font-size: 0.9375rem;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--muted-soft);
 }
 
-.fig-pair {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+.case-figure--row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.case-figure--row img {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+.case-figure--diagram img {
+  width: 100%;
+}
+
+.case-figure--diagram img[src*="structure-ia"] {
+  max-width: 680px;
 }
 
 /* ==========================================================
-   Тёмный блок «Результат»
+   Тёмный блок «Результат» и «Заключение»
    ========================================================== */
+.band-grid {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, var(--content));
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+
+.band-grid > h2 {
+  margin-bottom: 0;
+}
+
 .case-result {
-  margin-top: 48px;
+  margin-top: 24px;
   padding: 96px 0;
   background: var(--dark);
   color: var(--white);
 }
 
-.case-result .case-section > h2 {
+.case-result h2 {
   color: var(--white);
 }
 
-.case-result .prose p {
-  color: rgba(255, 255, 255, 0.78);
+.case-result .band-body p {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .stats {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 16px;
+  gap: 16px;
+  margin: 40px 0 56px;
 }
 
 .stat {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 28px;
+  gap: 12px;
+  padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 24px;
+  border-radius: 20px;
 }
 
 .stat-num {
-  font-size: clamp(3.25rem, 6vw, 4.75rem);
+  font-size: clamp(2.75rem, 5vw, 4rem);
   line-height: 1;
   letter-spacing: -0.04em;
   font-weight: 600;
@@ -495,55 +537,51 @@ html {
 }
 
 .stat-label {
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.72);
 }
 
-.case-result .decisions-title {
-  grid-column: 1 / -1;
-  margin: 24px 0 -8px;
-  font-size: 1.375rem;
-  letter-spacing: -0.02em;
+.case-result .band-body h3 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
   font-weight: 600;
   color: var(--white);
 }
 
 .decisions {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .decisions li {
-  padding: 28px;
-  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 8px;
+  padding: 20px 24px;
+  border-radius: 16px;
   background: #262626;
 }
 
 .decision-num {
-  display: block;
-  margin-bottom: 20px;
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: 0.04em;
+  line-height: 1.7;
   color: var(--lavender);
 }
 
-.decisions p {
+.case-result .decisions p {
+  max-width: none;
   margin: 0;
-  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.88);
 }
 
-/* ==========================================================
-   Заключение
-   ========================================================== */
 .case-conclusion {
   padding: 96px 0;
 }
@@ -551,17 +589,58 @@ html {
 .case-back {
   display: inline-flex;
   align-items: center;
-  margin-top: 32px;
-  padding: 14px 22px;
-  border-radius: 12px;
-  background: var(--lavender);
+  margin-top: 28px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--dark);
+  color: var(--white);
   font-size: 1rem;
   font-weight: 600;
-  transition: transform 180ms ease;
+  transition: background 180ms ease, color 180ms ease;
 }
 
 .case-back:hover {
-  transform: translateX(-3px);
+  background: var(--lavender);
+  color: var(--text);
+}
+
+/* ==========================================================
+   Кнопка «наверх»
+   ========================================================== */
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--dark);
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease, background 180ms ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  background: #3a3a3a;
+}
+
+.to-top:focus-visible {
+  outline: 3px solid var(--lavender);
+  outline-offset: 3px;
 }
 
 /* ==========================================================
@@ -593,7 +672,7 @@ html {
   margin: 0 auto;
   padding: 24px;
   border-radius: 20px;
-  background: var(--surface);
+  background: var(--white);
   cursor: zoom-in;
 }
 
@@ -624,42 +703,39 @@ body:has(dialog[open]) {
 /* ==========================================================
    Адаптив
    ========================================================== */
+@media (max-width: 1100px) {
+  :root {
+    --rail: 170px;
+    --rail-gap: 40px;
+  }
+}
+
 @media (max-width: 960px) {
   .case-hero-grid {
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
   }
 
-  .case-section {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 24px;
-    padding: 48px 0;
+  .case-layout {
+    display: block;
+    margin-top: 56px;
   }
 
-  .case-section > h2,
-  .case-section > h3,
-  .case-section > .prose,
-  .case-section > .video-frame {
-    grid-column: 1;
+  .case-rail {
+    display: none;
   }
 
+  .band-grid {
+    display: block;
+  }
+
+  .band-grid > h2 {
+    margin-bottom: 20px;
+  }
+
+  .case-section,
   .case-section--sub {
-    padding: 40px 0;
-  }
-
-  .group-card,
-  .group-card:nth-child(n + 4) {
-    grid-column: span 3;
-  }
-
-  .group-card:last-child {
-    grid-column: span 6;
-  }
-
-  .fig-pair,
-  .stats,
-  .decisions {
-    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 64px;
   }
 
   .case-result,
@@ -670,7 +746,7 @@ body:has(dialog[open]) {
 
 @media (max-width: 600px) {
   .case-hero {
-    padding: 40px 0 32px;
+    padding: 40px 0 24px;
   }
 
   .case-props > div {
@@ -678,66 +754,75 @@ body:has(dialog[open]) {
     gap: 12px;
   }
 
-  .case-toc {
-    margin: 32px 0 40px;
-  }
-
-  .case-section > h2 {
-    font-size: 1.5rem;
-  }
-
-  .case-section > h3 {
-    font-size: 1.25rem;
-  }
-
-  .prose p {
-    font-size: 1.0625rem;
-  }
-
-  .prose .statement {
-    font-size: 1.25rem;
-    padding-left: 18px;
-  }
-
-  .checks {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .group-card,
-  .group-card:nth-child(n + 4),
-  .group-card:last-child {
-    grid-column: span 6;
-  }
-
-  .fig-panel {
-    border-radius: 20px;
-    padding: 20px 12px;
-  }
-
-  .fig-panel--scroll {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-
-  .fig-panel--scroll img {
-    flex-shrink: 0;
-    min-width: var(--min, 600px);
-    max-width: none;
+  .case-video {
+    margin-top: 48px;
   }
 
   .video-frame {
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
-  .stat,
+  .case-content h2,
+  .band-grid h2 {
+    font-size: 1.625rem;
+  }
+
+  .case-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .case-content h3:not(:first-child) {
+    margin-top: 44px;
+  }
+
+  .case-content p,
+  .band-body p {
+    font-size: 1rem;
+  }
+
+  .case-content .lead {
+    font-size: 1.1875rem;
+  }
+
+  .case-content .challenge p {
+    font-size: 1.375rem;
+  }
+
+  .challenge {
+    margin: 44px 0;
+  }
+
+  .group-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-figure {
+    margin-top: 32px;
+  }
+
+  .case-figure--row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 32px 0 44px;
+  }
+
   .decisions li {
-    padding: 22px;
-    border-radius: 20px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding: 18px 20px;
   }
 
   .case-result,
   .case-conclusion {
     padding: 56px 0;
+  }
+
+  .to-top {
+    right: 16px;
+    bottom: 16px;
   }
 
   .lightbox {
