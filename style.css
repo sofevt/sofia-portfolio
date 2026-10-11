@@ -255,7 +255,7 @@ img {
 }
 
 .footer-doodle {
-  width: 86px;
+  width: clamp(72px, 8.75vw, 112px);
   height: auto;
   margin-bottom: 36px;
 }
@@ -339,7 +339,7 @@ img {
   }
 
   .footer-doodle {
-    width: 64px;
+    width: 80px;
     margin-bottom: 24px;
   }
 
