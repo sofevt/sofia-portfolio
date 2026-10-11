@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jarvi Resort — Case Study" />
-    <title>Jarvi Resort — Sofia's Case Study</title>
+    <title>Jarvi Resort — кейс продуктового дизайнера</title>
+    <meta
+      name="description"
+      content="Jarvi Resort: проектирование цифрового сервиса для гостей курорта. Информационная архитектура и wireframes мобильного приложения, 12 сценариев."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Jarvi Resort — кейс продуктового дизайнера" />
+    <meta
+      property="og:description"
+      content="Проектирование цифрового сервиса для гостей курорта: информационная архитектура и wireframes мобильного приложения."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,9 +23,8 @@
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../case-study.css" />
   </head>
-  <body>
+  <body class="case-page">
     <div class="page-shell">
-      <!-- Navigation Header -->
       <header class="site-header">
         <nav class="nav nav-left" aria-label="Основная навигация">
           <a href="../../#projects">проекты</a>
@@ -24,202 +32,540 @@
         </nav>
 
         <nav class="nav nav-right" aria-label="Контакты">
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer">telegram</a>
-          <a href="mailto:sofia@example.com">gmail</a>
+          <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+          <a href="mailto:sofaevt@gmail.com">gmail</a>
         </nav>
       </header>
 
-      <main class="case-study-main">
-        <!-- Hero Section with Title and Short Description -->
-        <section class="case-hero">
-          <div class="case-hero-content">
-            <div class="case-breadcrumb">
-              <a href="../../#projects">проекты</a>
-              <span class="breadcrumb-sep">/</span>
-              <span class="breadcrumb-current">Jarvi Resort</span>
+      <main>
+        <!-- ============ Шапка кейса ============ -->
+        <section class="case-hero" aria-label="О проекте">
+          <div class="case-wrap case-hero-grid">
+            <div class="case-hero-title">
+              <h1>Jarvi Resort</h1>
+              <p class="case-lead">Проектирование цифрового сервиса для гостей курорта</p>
             </div>
 
-            <h1 class="case-title">
-              Jarvi Resort <span class="case-title-arrow">&#129125;</span>
-            </h1>
-
-            <p class="case-description">
-              Проектирование цифрового сервиса для гостей курорта
-            </p>
-
-            <!-- Meta Info: Role, Timeline, Team -->
-            <div class="case-meta">
-              <div class="meta-item">
-                <span class="meta-label">Роль:</span>
-                <span class="meta-value">UX/UI-дизайнер</span>
+            <dl class="case-props">
+              <div>
+                <dt>Тип</dt>
+                <dd>
+                  <ul class="case-tags" aria-label="Теги проекта">
+                    <li>Рабочий кейс</li>
+                    <li>Hospitality</li>
+                    <li>Mobile</li>
+                    <li>Wireframes</li>
+                  </ul>
+                </dd>
               </div>
-              <div class="meta-item">
-                <span class="meta-label">Период:</span>
-                <span class="meta-value">2024-2025</span>
+              <div>
+                <dt>Роль</dt>
+                <dd>UX-дизайнер</dd>
               </div>
-              <div class="meta-item">
-                <span class="meta-label">Команда:</span>
-                <span class="meta-value">Дизайнер, product-менеджер, аналитик</span>
+              <div>
+                <dt>Год</dt>
+                <dd>2024–2025</dd>
               </div>
-            </div>
-
-            <!-- Tags/Skills -->
-            <ul class="case-tags" aria-label="Навыки и области проекта">
-              <li>Рабочий кейс</li>
-              <li>Hospitality</li>
-              <li>Mobile</li>
-              <li>Wireframes</li>
-            </ul>
+              <div>
+                <dt>Результат</dt>
+                <dd>Информационная архитектура и wireframes, 12 сценариев</dd>
+              </div>
+              <div>
+                <dt>Ссылки</dt>
+                <dd class="case-links">
+                  <a href="#video">Видеоразбор ↓</a>
+                  <a
+                    href="https://www.figma.com/design/XDDf9Z9hEiDsWCoKqALPy1/Jarvi-Resort"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Файл в Figma ↗</a
+                  >
+                </dd>
+              </div>
+            </dl>
           </div>
         </section>
 
-        <!-- Cover Image -->
-        <section class="case-cover">
-          <img
-            src="images/cover.jpg"
-            alt="Jarvi Resort — Project cover image"
-            loading="lazy"
-          />
+        <div class="case-wrap">
+          <figure class="case-figure">
+            <div class="fig-panel fig-panel--hero">
+              <img
+                src="images/01-overview.webp"
+                width="1307"
+                height="641"
+                alt="Четыре экрана приложения: главная, услуги, запись на массаж, доступы"
+              />
+            </div>
+          </figure>
+
+          <nav class="case-toc" aria-label="Разделы кейса">
+            <span class="case-toc-label">Разделы</span>
+            <a href="#video">Видео</a>
+            <a href="#context">Контекст</a>
+            <a href="#task">Задача</a>
+            <a href="#structure">Структура</a>
+            <a href="#home">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#access">Доступы</a>
+            <a href="#registration">Регистрация</a>
+            <a href="#chat">Чат</a>
+            <a href="#profile">Профиль</a>
+            <a href="#result">Результат</a>
+          </nav>
+
+          <!-- ============ Видео ============ -->
+          <section class="case-section" id="video">
+            <h2>Видеоразбор</h2>
+            <div class="prose">
+              <p>Можно почитать кейс, а можно посмотреть и послушать Loom.</p>
+            </div>
+            <div class="video-frame">
+              <iframe
+                src="https://www.loom.com/embed/895e7bc9ca4e4791919943d05a3f009f"
+                title="Видеоразбор кейса Jarvi Resort"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
+
+          <!-- ============ Контекст ============ -->
+          <section class="case-section" id="context">
+            <h2>Контекст</h2>
+            <div class="prose">
+              <p>Jarvi Resort — новый SPA-курорт, открытие которого запланировано на 2027 год.</p>
+              <p>
+                Современный курорт — это не просто проживание, а набор взаимосвязанных сервисов:
+                заселение, цифровые доступы, запись на процедуры, заказ еды, мероприятия,
+                коммуникация с персоналом, программа лояльности.
+              </p>
+              <p>
+                Без единой системы всё это проходит через ресепшен, звонки и разрозненные каналы.
+                Сотрудники тратят время на типовые запросы, гости — на поиск информации.
+              </p>
+              <aside class="callout">
+                <span class="callout-icon" aria-hidden="true">📌</span>
+                <p>
+                  <strong>Задача продукта:</strong> собрать ключевые точки взаимодействия гостя с
+                  отелем в одном приложении и сделать пребывание более удобным и самостоятельным.
+                </p>
+              </aside>
+            </div>
+          </section>
+
+          <!-- ============ Моя задача ============ -->
+          <section class="case-section" id="task">
+            <h2>Моя задача</h2>
+            <div class="prose">
+              <p>
+                Спроектировать структуру и вайрфреймы мобильного приложения, которое объединяет:
+              </p>
+              <ul class="checks">
+                <li>проживание и бронирование</li>
+                <li>цифровые доступы (номер, шлагбаум, транспорт)</li>
+                <li>SPA и оздоровительные процедуры</li>
+                <li>заказ еды и услуг</li>
+                <li>мероприятия и досуг</li>
+                <li>онлайн-регистрацию гостей</li>
+                <li>коммуникацию с персоналом</li>
+                <li>программу лояльности</li>
+              </ul>
+              <p class="statement">
+                <strong>Главный вызов:</strong> организовать большое количество функций в понятную
+                структуру — без перегрузки интерфейса.
+              </p>
+              <aside class="callout callout--stack">
+                <h3>Работа с требованиями</h3>
+                <p>
+                  Перед проектированием я изучила бизнес-требования совместно с аналитиком:
+                  разбирала ТЗ, выявляла противоречия и спорные сценарии, уточняла логику.
+                </p>
+                <p>
+                  Это позволило согласовать структуру продукта заранее и снизить количество правок
+                  уже на этапе вайрфреймов.
+                </p>
+              </aside>
+            </div>
+          </section>
+
+          <!-- ============ Структура ============ -->
+          <section class="case-section" id="structure">
+            <h2>Как формировалась структура приложения</h2>
+            <div class="prose">
+              <p>
+                Перед проектированием экранов я сгруппировала функции по пользовательским задачам —
+                чтобы собрать разрозненные сервисы в единую систему и избежать перегруженной
+                навигации.
+              </p>
+              <h3><span class="step-label">Шаг 1</span> Группировка по сценариям</h3>
+              <p>Я объединила функции вокруг основных задач гостя:</p>
+            </div>
+
+            <div class="group-grid">
+              <div class="group-card">
+                <span class="group-icon" aria-hidden="true">🏨</span>
+                <p><strong>Управление пребыванием:</strong> бронирование, номер, доступы</p>
+              </div>
+              <div class="group-card">
+                <span class="group-icon" aria-hidden="true">🍽️</span>
+                <p>
+                  <strong>Сервисы отеля:</strong> процедуры, питание, аренда, дополнительные услуги
+                </p>
+              </div>
+              <div class="group-card">
+                <span class="group-icon" aria-hidden="true">🎭</span>
+                <p><strong>Досуг:</strong> мероприятия и активности</p>
+              </div>
+              <div class="group-card">
+                <span class="group-icon" aria-hidden="true">💬</span>
+                <p><strong>Взаимодействие с отелем:</strong> чат и уведомления</p>
+              </div>
+              <div class="group-card">
+                <span class="group-icon" aria-hidden="true">👤</span>
+                <p>
+                  <strong>Личный кабинет:</strong> данные гостя, бронирования, лояльность,
+                  онлайн-регистрация
+                </p>
+              </div>
+            </div>
+
+            <div class="prose prose--after">
+              <h3><span class="step-label">Шаг 2</span> Финальная структура</h3>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel fig-panel--ia">
+                <img
+                  src="images/02-structure-ia.webp"
+                  width="520"
+                  height="265"
+                  loading="lazy"
+                  alt="Информационная архитектура: пять разделов навигации — Главная, Чат, Доступы, Профиль, Услуги — и их содержимое"
+                />
+              </div>
+              <figcaption>Финальная структура: пять разделов навигации и их содержимое</figcaption>
+            </figure>
+          </section>
+
+          <!-- ============ Ключевые разделы ============ -->
+          <section class="case-section case-section--intro" aria-labelledby="sections-title">
+            <h2 id="sections-title">Навигация и ключевые разделы</h2>
+            <div class="prose">
+              <p>
+                Пять разделов нижней навигации: главная, чат, доступы, профиль и услуги. Ниже — как
+                устроен каждый из них.
+              </p>
+            </div>
+          </section>
+
+          <section class="case-section case-section--sub" id="home">
+            <h3>Главная</h3>
+            <div class="prose">
+              <p>
+                Главный экран я спроектировала вокруг частых задач гостя во время проживания. Я
+                сфокусировалась на сценариях, которые требуют быстрого доступа: информация о
+                проживании, доступ в номер, питание и ближайшие записи.
+              </p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/03-home.webp"
+                  width="725"
+                  height="641"
+                  loading="lazy"
+                  alt="Главный экран с подписями: основное действие «Открыть номер», быстрый доступ к завтраку, расписание гостя, быстрые действия, полезная информация"
+                />
+              </div>
+            </figure>
+
+            <div class="prose prose--after">
+              <p>
+                Отдельно проработала сценарий питания. В зависимости от условий бронирования
+                карточка либо предоставляет быстрый доступ к QR-коду для посещения ресторана, либо
+                предлагает оформить питание отдельно.
+              </p>
+            </div>
+
+            <div class="fig-pair">
+              <figure class="case-figure">
+                <div class="fig-panel">
+                  <img
+                    src="images/04-home-qr.webp"
+                    width="641"
+                    height="641"
+                    loading="lazy"
+                    alt="Карточка завтрака на главной и экран с QR-кодом для ресторана"
+                  />
+                </div>
+                <figcaption>Питание включено: быстрый доступ к QR-коду</figcaption>
+              </figure>
+              <figure class="case-figure">
+                <div class="fig-panel">
+                  <img
+                    src="images/05-home-offer.webp"
+                    width="641"
+                    height="641"
+                    loading="lazy"
+                    alt="Карточка с предложением добавить завтрак и экран оформления питания"
+                  />
+                </div>
+                <figcaption>Питание не включено: предложение оформить отдельно</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="case-section case-section--sub" id="services">
+            <h3>Услуги</h3>
+            <div class="prose">
+              <p>Единая точка входа для всех сервисных сценариев:</p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/06-services-1.webp"
+                  width="974"
+                  height="641"
+                  loading="lazy"
+                  alt="Раздел «Услуги»: афиша, рум-сервис, запись на массаж, выбор мастера"
+                />
+              </div>
+            </figure>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/07-services-2.webp"
+                  width="856"
+                  height="641"
+                  loading="lazy"
+                  alt="Карточка блюда с выбором опции и корзина с подписью «Единая модель: услуга = единица товара»"
+                />
+              </div>
+            </figure>
+          </section>
+
+          <section class="case-section case-section--sub" id="access">
+            <h3>Доступы</h3>
+            <div class="prose">
+              <p>
+                Раздел объединяет все сценарии управления доступом: вход в номер, проезд на
+                территорию и настройку гостевых доступов.
+              </p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/08-access.webp"
+                  width="308"
+                  height="641"
+                  loading="lazy"
+                  alt="Экран «Доступы»: код от двери номера и шлагбаум"
+                />
+                <img
+                  src="images/09-access-details.webp"
+                  width="641"
+                  height="641"
+                  loading="lazy"
+                  alt="Экраны управления номерами транспортных средств и номерами телефонов"
+                />
+              </div>
+            </figure>
+          </section>
+
+          <section class="case-section case-section--sub" id="registration">
+            <h3>Предварительная регистрация гостей</h3>
+            <div class="prose">
+              <p>
+                Заселение семьи или корпоративной группы — юридически обязательный процесс:
+                документы каждого гостя должны быть проверены администратором.
+              </p>
+              <p>
+                Гость может заранее заполнить данные всех проживающих в номере и добавить
+                транспортные средства в рамках одной брони.
+              </p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/10-registration.webp"
+                  width="891"
+                  height="641"
+                  loading="lazy"
+                  alt="Экран бронирования и экран регистрации в отеле со статусом проверки по каждому гостю"
+                />
+              </div>
+              <figcaption>Путь: Профиль / Бронирования / Регистрация</figcaption>
+            </figure>
+
+            <figure class="case-figure">
+              <div class="fig-panel fig-panel--scroll">
+                <img
+                  src="images/11-registration-flow.webp"
+                  width="1435"
+                  height="624"
+                  loading="lazy"
+                  alt="Флоу регистрации: вход в сценарий, форма, отправка на проверку, проверка сотрудником, обратная связь — всё верно или есть ошибка"
+                />
+              </div>
+              <figcaption>Флоу проверки регистрации: от входа в сценарий до обратной связи</figcaption>
+            </figure>
+
+            <div class="prose prose--after">
+              <p>
+                Статус отображается отдельно по каждому участнику. В случае ошибки администратор
+                отправляет пояснительный комментарий в чат с гостем.
+              </p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/12-registration-form.webp"
+                  width="677"
+                  height="641"
+                  loading="lazy"
+                  alt="Форма гостя со статусом «Есть ошибка» и комментарий администратора в чате"
+                />
+              </div>
+            </figure>
+          </section>
+
+          <section class="case-section case-section--sub" id="chat">
+            <h3>Чат</h3>
+            <div class="prose">
+              <p>
+                Чат — это единый канал связи с отелем и точка обратной связи для регистрации и
+                различных сервисных вопросов.
+              </p>
+            </div>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/13-chat.webp"
+                  width="641"
+                  height="641"
+                  loading="lazy"
+                  alt="Чат с отелем: отправленный запрос и ответ администратора"
+                />
+              </div>
+            </figure>
+          </section>
+
+          <section class="case-section case-section--sub" id="profile">
+            <h3>Профиль</h3>
+
+            <figure class="case-figure">
+              <div class="fig-panel">
+                <img
+                  src="images/14-profile.webp"
+                  width="444"
+                  height="641"
+                  loading="lazy"
+                  alt="Профиль: статус и бонусы, данные гостя, транспорт, программа лояльности, бронирования, настройки"
+                />
+              </div>
+            </figure>
+          </section>
+        </div>
+
+        <!-- ============ Результат (тёмный блок) ============ -->
+        <section class="case-result" id="result">
+          <div class="case-wrap">
+            <div class="case-section case-section--plain">
+              <h2>Результат</h2>
+              <div class="prose">
+                <p>
+                  Я спроектировала информационную архитектуру и детализированные wireframes
+                  мобильного приложения — подготовила 12 сценариев в Figma с состояниями,
+                  edge-кейсами и флоу, которые стали основой для дальнейшего UI-дизайна и
+                  разработки.
+                </p>
+                <p>
+                  В результате гость получает удобный и самостоятельный доступ ко всем возможностям
+                  курорта в одном приложении, а команда отеля — единую систему, которая
+                  автоматизирует рутинные процессы и снижает нагрузку на ресепшен.
+                </p>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <span class="stat-num">12</span>
+                  <span class="stat-label">сценариев в Figma: состояния, edge-кейсы, флоу</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">5</span>
+                  <span class="stat-label">разделов навигации вместо хаоса каналов</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">4</span>
+                  <span class="stat-label">статуса проверки регистрации по каждому гостю</span>
+                </div>
+              </div>
+
+              <h3 class="decisions-title">Ключевые решения</h3>
+              <ol class="decisions">
+                <li>
+                  <span class="decision-num">01</span>
+                  <p>
+                    Главный экран — персональный дашборд с приоритетом по частоте использования и
+                    актуальности
+                  </p>
+                </li>
+                <li>
+                  <span class="decision-num">02</span>
+                  <p>
+                    Вынесла доступы и сервисы в отдельные разделы навигации: частые срочные
+                    действия отделены от сценариев с выбором и бронированием
+                  </p>
+                </li>
+                <li>
+                  <span class="decision-num">03</span>
+                  <p>
+                    Сложный сценарий групповой регистрации проработала через пошаговый флоу с
+                    визуальными статусами проверки по каждому гостю
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
         </section>
 
-        <!-- Main Content Container -->
-        <article class="case-content">
-          <!-- SECTION: Overview -->
-          <section class="case-section">
-            <h2>Overview</h2>
-            <p>
-              Add a compelling overview that summarizes the project goal, the challenge,
-              and the outcome in 2–3 sentences. This gives readers the context they need
-              before diving into details.
-            </p>
-            <p>
-              You can add multiple paragraphs here. Keep them short and scannable.
-            </p>
-          </section>
-
-          <!-- SECTION: Context / Problem -->
-          <section class="case-section">
-            <h2>Context & Problem</h2>
-            <p>
-              Describe the business context and the problem that needed solving.
-              What was the pain point? What triggered this project?
-            </p>
-            <p>
-              Be specific about metrics, user feedback, or market challenges that
-              informed the project scope.
-            </p>
-          </section>
-
-          <!-- SECTION: Research -->
-          <section class="case-section">
-            <h2>Research</h2>
-            <p>
-              Summarize your research approach: interviews, user testing, competitive
-              analysis, or data review. What did you learn?
-            </p>
-            <p>
-              Include key insights or findings that shaped the design direction.
-            </p>
-
-            <!-- Optional: Research Image -->
-            <figure class="case-figure">
-              <img
-                src="images/research.jpg"
-                alt="Research findings or workshop notes"
-                loading="lazy"
-              />
-              <figcaption>Caption for research image (optional)</figcaption>
-            </figure>
-          </section>
-
-          <!-- SECTION: User Scenarios / Insights -->
-          <section class="case-section">
-            <h2>User Scenarios & Insights</h2>
-            <p>
-              Paint a picture of who the users are and what they need. Use real scenarios
-              or personas to guide the design decisions.
-            </p>
-            <p>
-              Example: "A first-time guest wants to book a room, add services, and pay
-              securely within 5 minutes."
-            </p>
-          </section>
-
-          <!-- SECTION: UX Process -->
-          <section class="case-section">
-            <h2>UX Process</h2>
-            <p>
-              Walk through your design process: sketching, wireframing, prototyping,
-              testing. What iterations did you go through?
-            </p>
-            <p>
-              Include key decisions and trade-offs you made along the way.
-            </p>
-
-            <!-- Optional: Process Image -->
-            <figure class="case-figure">
-              <img
-                src="images/wireframes.jpg"
-                alt="Wireframes and user flow sketches"
-                loading="lazy"
-              />
-              <figcaption>Early wireframes exploring the booking flow</figcaption>
-            </figure>
-          </section>
-
-          <!-- SECTION: Design Solution -->
-          <section class="case-section">
-            <h2>Design Solution</h2>
-            <p>
-              Present the final design. Explain the key features, layout, and visual
-              approach. Why did you choose this direction?
-            </p>
-            <p>
-              Focus on how the design solves the user problem and meets business goals.
-            </p>
-
-            <!-- Optional: Solution Image -->
-            <figure class="case-figure">
-              <img
-                src="images/solution.jpg"
-                alt="Final UI design and key screens"
-                loading="lazy"
-              />
-              <figcaption>Final design system and key user screens</figcaption>
-            </figure>
-          </section>
-
-          <!-- SECTION: Final Result -->
-          <section class="case-section">
-            <h2>Final Result</h2>
-            <p>
-              Share the outcome: metrics, user feedback, or business impact. Did the
-              design achieve its goals?
-            </p>
-            <p>
-              Include before/after comparisons, user satisfaction scores, or conversion
-              metrics if applicable.
-            </p>
-          </section>
-
-          <!-- SECTION: Reflections & Learnings -->
-          <section class="case-section">
-            <h2>Reflections & Learnings</h2>
-            <p>
-              Reflect on what you learned from this project. What would you do
-              differently? What surprised you?
-            </p>
-            <p>
-              This is your chance to show growth, critical thinking, and takeaways
-              for future work.
-            </p>
-          </section>
-        </article>
+        <!-- ============ Заключение ============ -->
+        <section class="case-conclusion">
+          <div class="case-wrap">
+            <div class="case-section case-section--plain">
+              <h2>Заключение</h2>
+              <div class="prose">
+                <p>
+                  Главный вывод из проекта: в сложных сервисных продуктах качество UX определяется
+                  архитектурой и приоритизацией сценариев, а не отдельными экранами.
+                </p>
+                <p>
+                  Дальше я бы проверила навигацию на гостях разного возраста, уточнила частоту
+                  использования ключевых сценариев и протестировала несколько вариантов главного
+                  экрана после MVP.
+                </p>
+                <a class="case-back" href="../../#projects">← Все проекты</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <!-- Footer -->
       <footer class="site-footer" aria-label="Контакты и футер">
         <div class="footer-content">
+          <img
+            class="footer-doodle"
+            src="../../images/envelope.svg"
+            alt=""
+            aria-hidden="true"
+          />
           <h2>буду рада познакомиться!</h2>
 
           <div class="footer-row">
@@ -229,12 +575,43 @@
             </div>
 
             <div class="footer-links footer-right">
-              <a href="https://t.me/" target="_blank" rel="noopener noreferrer">telegram</a>
-              <a href="mailto:sofia@example.com">gmail</a>
+              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+              <a href="mailto:sofaevt@gmail.com">gmail</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
+
+    <!-- Просмотр картинок по клику -->
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+      <button class="lightbox-close" type="button" aria-label="Закрыть">✕</button>
+      <img alt="" />
+    </dialog>
+
+    <script>
+      (function () {
+        var dlg = document.getElementById("lightbox");
+        if (!dlg || typeof dlg.showModal !== "function") return;
+        var big = dlg.querySelector("img");
+
+        document.querySelectorAll(".fig-panel img").forEach(function (img) {
+          img.addEventListener("click", function () {
+            big.src = img.currentSrc || img.src;
+            big.alt = img.alt;
+            big.classList.remove("is-zoomed");
+            dlg.showModal();
+          });
+        });
+
+        big.addEventListener("click", function () {
+          big.classList.toggle("is-zoomed");
+        });
+
+        dlg.addEventListener("click", function (e) {
+          if (e.target === dlg || e.target.classList.contains("lightbox-close")) dlg.close();
+        });
+      })();
+    </script>
   </body>
 </html>
