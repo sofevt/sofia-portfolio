@@ -113,22 +113,21 @@ img {
 }
 
 .hero {
-  min-height: 430px;
-  padding-top: 34px;
-  padding-bottom: 56px;
+  min-height: 600px;
+  padding: 80px 24px 72px;
   display: flex;
   align-items: center;
 }
 
 .hero-inner {
-  width: min(100%, 800px);
+  width: min(100%, 1150px);
   margin: 0 auto;
 }
 
 .hero-copy {
+  max-width: 1000px;
   margin: 0;
-  max-width: 800px;
-  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  font-size: clamp(2rem, 3.2vw, 3rem);
   line-height: 1.15;
   letter-spacing: -0.055em;
   font-weight: 600;
@@ -137,26 +136,23 @@ img {
 }
 
 .hero-description {
-  margin-top: 26px;
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  align-items: start;
-  column-gap: 18px;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+  margin-top: 44px;
 }
 
-.hero-sparkle {
-  display: block;
-  color: var(--text);
-  font-size: 3.5rem;
-  line-height: 1;
-  text-align: center;
-  font-weight: 400;
+.hero-doodle {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .hero-description p {
+  max-width: 850px;
   margin: 0;
-  max-width: 680px;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
   line-height: 1.2;
   letter-spacing: -0.045em;
   font-weight: 600;
@@ -386,35 +382,25 @@ img {
   }
 
   .hero {
-    min-height: auto;
-    padding-top: 52px;
-    padding-bottom: 44px;
-  }
+  min-height: auto;
+  padding: 64px 24px 48px;
+}
 
-  .hero-inner {
-    width: 100%;
-  }
+.hero-description {
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
 
-  .hero-copy {
-    font-size: clamp(1.9rem, 5.5vw, 2.6rem);
-    line-height: 1.15;
-    letter-spaсing: -0.055em;
-  }
+.hero-doodle {
+  width: 36px;
+  height: 36px;
+}
 
-  .hero-description {
-    grid-template-columns: 36px minmax(0, 1fr);
-    column-gap: 12px;
-    margin-top: 22px;
-  }
-
-  .hero-sparkle {
-    font-size: 2.5rem;
-  }
-
-  .hero-description p {
-    font-size: clamp(1.25rem, 4.5vw, 1.7rem);
-    line-height: 1.25;
-  }
+.hero-description p {
+  font-size: clamp(1.25rem, 4.5vw, 1.7rem);
+  line-height: 1.25;
+}
 
   .projects-section {
     padding: 48px 0;
