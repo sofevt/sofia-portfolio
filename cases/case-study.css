@@ -721,7 +721,7 @@ body:has(dialog[open]) {
 
   .fig-panel--scroll img {
     flex-shrink: 0;
-    min-width: 720px;
+    min-width: var(--min, 600px);
     max-width: none;
   }
 
