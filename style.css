@@ -202,6 +202,32 @@ img {
   letter-spacing: -0.02em;
   font-weight: 600;
 }
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-header h2 {
+  margin: 0;
+}
+
+.project-arrow {
+  width: 40px;
+  aspect-ratio: 138 / 96;
+  flex-shrink: 0;
+  background: var(--lavender);
+  -webkit-mask: url("images/arrow.png") center / contain no-repeat;
+  mask: url("images/arrow.png") center / contain no-repeat;
+  transition: transform 180ms ease;
+}
+
+.project-card:hover .project-arrow,
+.project-card:focus-visible .project-arrow {
+  transform: translate(4px, -4px);
+}
 
 .project-text p {
   margin: 0;
@@ -296,6 +322,9 @@ img {
 @media (max-width: 768px) {
   .site-header {
     padding-top: 24px;
+  }
+     .project-arrow {
+    width: 28px;
   }
 
   .hero {
