@@ -140,7 +140,7 @@ img {
 }
 
 .hero-doodle {
-  width: clamp(88px, 11vw, 140px);
+  width: clamp(220px, 15vw, 160px);
   height: auto;
   margin: 44px 0 48px;
 }
