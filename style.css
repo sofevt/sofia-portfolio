@@ -140,7 +140,7 @@ img {
 }
 
 .hero-doodle {
-  width: clamp(72px, 8.5vw, 108px);
+  width: clamp(88px, 11vw, 140px);
   height: auto;
   margin: 44px 0 48px;
 }
@@ -200,7 +200,7 @@ img {
   font-size: 1.5rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .project-text p {
