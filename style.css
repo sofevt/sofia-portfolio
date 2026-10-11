@@ -127,7 +127,7 @@ img {
   font-size: var(--fs-display);
   line-height: 1.2;
   letter-spacing: -0.03em;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
 }
 
