@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft — кейс продуктового дизайнера</title>
+    <meta
+      name="description"
+      content="Soft: мобильное приложение для осознанного развития soft skills и обмена опытом. Исследование, структура, сценарии, UI и UI kit."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Soft — кейс продуктового дизайнера" />
+    <meta
+      property="og:description"
+      content="Мобильное приложение для осознанного развития soft skills и обмена опытом: от исследования до UI kit."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../case-study.css" />
+  </head>
+  <body class="case-page">
+    <div class="page-shell" id="top">
+      <header class="site-header">
+        <nav class="nav nav-left" aria-label="Основная навигация">
+          <a href="../../">главная</a>
+          <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+        </nav>
+
+        <nav class="nav nav-right" aria-label="Контакты">
+          <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+          <a href="mailto:sofaevt@gmail.com">gmail</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- ============ Шапка кейса ============ -->
+        <section class="case-hero" aria-label="О проекте">
+          <div class="case-wrap case-hero-grid">
+            <div class="case-hero-title">
+              <h1>Soft</h1>
+              <p class="case-lead">
+                Мобильное приложение для осознанного развития soft skills и обмена опытом
+              </p>
+            </div>
+
+            <dl class="case-props">
+              <div>
+                <dt>Тип</dt>
+                <dd>
+                  <ul class="case-tags" aria-label="Теги проекта">
+                    <li>Пет-проект</li>
+                    <li>EdTech</li>
+                    <li>UX/UI</li>
+                    <li>Mobile</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Роль</dt>
+                <dd>UX/UI-дизайнер</dd>
+              </div>
+              <div>
+                <dt>Год</dt>
+                <dd>2024–2025</dd>
+              </div>
+              <div>
+                <dt>Что сделано</dt>
+                <dd>Исследование, структура тем, сценарии, UI и UI kit</dd>
+              </div>
+              <div>
+                <dt>Figma</dt>
+                <dd class="case-links">
+                  <a
+                    href="https://www.figma.com/design/XWpkaaIrWijxhCsnKqmpb2/Soft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Открыть макеты</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <div class="case-wrap">
+          <figure class="case-figure case-figure--hero">
+            <img
+              src="images/01-hero.webp"
+              width="974"
+              height="641"
+              alt="Три экрана приложения Soft: главная лента, профиль автора, плеер подкаста"
+            />
+          </figure>
+        </div>
+
+        <!-- ============ Текст кейса: слева содержание, справа контент ============ -->
+        <div class="case-wrap case-layout">
+          <aside class="case-rail" aria-label="Содержание">
+            <nav class="case-toc" aria-label="Разделы кейса">
+              <p class="toc-title">Содержание</p>
+              <ol>
+                <li><a href="#about">О проекте</a></li>
+                <li>
+                  <a href="#research">Исследование</a>
+                  <ol>
+                    <li><a href="#market">Анализ рынка</a></li>
+                    <li><a href="#interviews">Интервью</a></li>
+                    <li><a href="#insights">Инсайты</a></li>
+                    <li><a href="#jtbd">JTBD</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#design">Проектирование</a>
+                  <ol>
+                    <li><a href="#topics">Структура тем</a></li>
+                    <li><a href="#scenarios">Сценарии</a></li>
+                    <li><a href="#decisions">Дизайн-решения</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#ui">UI дизайн</a>
+                  <ol>
+                    <li><a href="#style">Визуальный стиль</a></li>
+                    <li><a href="#uikit">UI kit</a></li>
+                  </ol>
+                </li>
+                <li><a href="#conclusion">Заключение</a></li>
+              </ol>
+            </nav>
+          </aside>
+
+          <div class="case-content">
+            <!-- О проекте -->
+            <section class="case-section case-section--group" id="about">
+              <h2>О проекте</h2>
+              <p class="lead">
+                Цель Soft — объединение людей, заинтересованных в личном и профессиональном
+                развитии; создание безопасного пространства для обучения и обмена опытом между
+                пользователями в формате текста, видео или подкаста.
+              </p>
+            </section>
+
+            <section class="case-section case-section--sub" id="problem">
+              <h3>Проблема</h3>
+              <p>
+                Развитие гибких навыков (soft skills) часто происходит хаотично. Материалы
+                разбросаны по разным социальным сетям и платформам, что сильно затрудняет их поиск
+                и освоение.
+              </p>
+              <p>
+                При этом алгоритмы соцсетей постоянно уводят пользователя от обучения в сторону
+                развлекательного контента, а в мессенджерах полезные материалы тонут в шуме рабочих
+                чатов.
+              </p>
+              <aside class="callout">
+                <span class="callout-icon" aria-hidden="true">📌</span>
+                <p>
+                  <strong>Задача:</strong> спроектировать мобильное приложение, которое помогает
+                  людям развивать soft skills и делиться опытом в спокойной, сфокусированной среде.
+                </p>
+              </aside>
+            </section>
+
+            <!-- Исследование -->
+            <section class="case-section case-section--group" id="research">
+              <h2>Исследование и анализ</h2>
+              <p>
+                Моя цель на этапе исследования — понять, какие потребности пользователей остаются
+                незакрытыми, и найти возможность для более спокойного и сфокусированного опыта
+                потребления контента.
+              </p>
+            </section>
+
+            <section class="case-section case-section--sub" id="market">
+              <h3>Анализ рынка и конкурентов</h3>
+              <p>
+                Я проанализировала, где аудитория сейчас ищет контент по гибким навыкам, и выделила
+                две группы конкурентов:
+              </p>
+              <div class="card-row">
+                <div class="info-card">
+                  <h4>Прямые (VC.ru, Medium)</h4>
+                  <p>
+                    Имеют привычный интерфейс, но часто перегружены информационным шумом (новости,
+                    PR). Пользователь отвлекается, а авторы вынуждены участвовать в гонке за
+                    вниманием.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h4>Косвенные (Telegram-каналы, EdTech)</h4>
+                  <p>
+                    В Telegram полезные посты тонут в шуме рабочих чатов. В EdTech (Coursera,
+                    курсы) высокий барьер входа по времени и деньгам.
+                  </p>
+                </div>
+              </div>
+
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Критерий / Платформа</th>
+                      <th scope="col">VC.ru (прямой)</th>
+                      <th scope="col">Telegram-каналы</th>
+                      <th scope="col">EdTech (курсы)</th>
+                      <th scope="col" class="is-soft">Soft</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Цель контента</th>
+                      <td>Бизнес-новости, стартапы, PR</td>
+                      <td>Общение, короткие посты, экспертные заметки</td>
+                      <td>Академические программы, лекции, тесты</td>
+                      <td class="is-soft">Осознанное, мультиформатное изучение soft skills</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Режим пользователя</th>
+                      <td>«Сканирование новостей / думскроллинг»</td>
+                      <td>«Флуд / нетворкинг»</td>
+                      <td>«Формальное обучение»</td>
+                      <td class="is-soft">«Глубокий фокус / саморазвитие»</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Уровень шума</th>
+                      <td><strong>Высокий</strong> (реклама, кликбейт, политика)</td>
+                      <td><strong>Высокий</strong> (флуд в чатах, уведомления)</td>
+                      <td>Низкий</td>
+                      <td class="is-soft">Только темы soft skills</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Барьеры для авторов</th>
+                      <td>
+                        <strong>Высокие</strong> (нужно конкурировать за охваты с медиа-агентствами)
+                      </td>
+                      <td>Высокие (контент быстро теряется в ленте чатов)</td>
+                      <td>Очень высокие (контракт с платформой)</td>
+                      <td class="is-soft">
+                        Низкие (фокус на ценности материала, а не на регулярности)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <aside class="callout callout--after">
+                <span class="callout-icon" aria-hidden="true">👀</span>
+                <p>
+                  <strong>Мой вывод:</strong> продуктам со схожим функционалом не хватает фокуса. Я
+                  приняла решение использовать <strong>знакомые пользователям паттерны</strong>, но
+                  очистить интерфейсную среду от шума, вдохновляясь «Slow Media».
+                </p>
+              </aside>
+            </section>
+
+            <section class="case-section case-section--sub" id="interviews">
+              <h3>Интервью</h3>
+              <p>
+                Анализ рынка дал общую картину и, чтобы разузнать больше, я также провела интервью
+                с потенциальными пользователями.
+              </p>
+
+              <article class="persona">
+                <span class="persona-avatar" aria-hidden="true">👩🏻</span>
+                <div>
+                  <h4>Александра, 26 лет — менеджер проектов</h4>
+                  <p>
+                    Три года в профессии, сейчас в поиске работы (на позицию лида). Понимает, что
+                    технических навыков уже недостаточно — нужно уметь договариваться, давать
+                    обратную связь, управлять конфликтами. Ищет контент по саморазвитию, но он
+                    разбросан по YouTube, телеграм-каналам, vc.ru.
+                  </p>
+                  <blockquote>
+                    «Я знаю что надо развиваться, но не понимаю что именно качать прямо сейчас.
+                    Читаю, смотрю, но все в разных местах. Часто отвлекаюсь на совершенно другие
+                    темы из рекомендаций.»
+                  </blockquote>
+                </div>
+              </article>
+
+              <article class="persona">
+                <span class="persona-avatar" aria-hidden="true">🧔🏻</span>
+                <div>
+                  <h4>Илья, 31 год — Senior разработчик, тимлид</h4>
+                  <p>
+                    Технически сильный. Когда начинал, часто сомневался в своих решениях, чувствовал
+                    себя неуверенно. Но уже накопил реальный опыт управления командой — думал о
+                    блоге, но не знает с чего начать и считает, что «недостаточно эксперт».
+                  </p>
+                  <blockquote>
+                    «Чтобы вести какой-то блог надо регулярно что-то выкладывать, а то алгоритмы
+                    тебя похоронят. Я так долго не смогу. Плюс, не знаю, кому интересен мой опыт»
+                  </blockquote>
+                </div>
+              </article>
+
+              <article class="persona">
+                <span class="persona-avatar" aria-hidden="true">👩🏻‍🦱</span>
+                <div>
+                  <h4>Светлана, 38 лет — HR</h4>
+                  <p>
+                    15 лет в профессии. Устала от вечного достигаторства и глянцевого контента с
+                    «5 шагами к успеху». Хочет находить живые практические истории и создавать
+                    что-то самой — без давления и гонки за охватами.
+                  </p>
+                  <blockquote>
+                    «Хотелось бы делиться чем-то с небольшим коммьюнити, возможно с людьми именно по
+                    моей специальности.»
+                  </blockquote>
+                  <blockquote>
+                    «Была попытка ведения телеграм канала, писала посты на тему публичных
+                    выступлений и подобного, но охваты упали. Да и вечно теряются эти каналы среди
+                    других чатов.»
+                  </blockquote>
+                </div>
+              </article>
+            </section>
+
+            <section class="case-section case-section--sub" id="insights">
+              <h3>Ключевые инсайты</h3>
+              <div class="card-row card-row--3">
+                <div class="info-card">
+                  <span class="info-icon" aria-hidden="true">😵‍💫</span>
+                  <h4>Информационный шум</h4>
+                  <p>
+                    Пользователи отвлекаются и теряют полезный контент среди множества платформ,
+                    лент и рабочих чатов.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <span class="info-icon" aria-hidden="true">🫣</span>
+                  <h4>Давление алгоритмов</h4>
+                  <p>
+                    Авторы чувствуют необходимость постоянно публиковать контент, чтобы оставаться
+                    в поле зрения подписчиков.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <span class="info-icon" aria-hidden="true">🙄</span>
+                  <h4>Запрос на спокойную среду</h4>
+                  <p>
+                    Пользователи устали от культуры достигаторства и ищут более камерное
+                    профессиональное пространство.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-section case-section--sub" id="jtbd">
+              <h3>JTBD</h3>
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Когда</span>
+                  <p>я хочу развития в профессии,</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Я хочу</span>
+                  <p>быстро находить релевантные материалы по нужной теме,</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Чтобы</span>
+                  <p>не тратить время на хаотичный поиск и шум и не тонуть в ленте соцсетей.</p>
+                </div>
+              </div>
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Когда</span>
+                  <p>я хочу делиться опытом,</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Я хочу</span>
+                  <p>делать это без давления и гонки за вниманием,</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Чтобы</span>
+                  <p>не разбираться в запутанных алгоритмах и не превращать публикации во вторую работу.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Проектирование -->
+            <section class="case-section case-section--group" id="design">
+              <h2>Проектирование</h2>
+            </section>
+
+            <section class="case-section case-section--sub" id="topics">
+              <h3>Структура тем</h3>
+              <figure class="case-figure case-figure--top">
+                <img
+                  src="images/02-topics.webp"
+                  width="799"
+                  height="526"
+                  loading="lazy"
+                  alt="Экран выбора тем, раздел «Мои подписки» и страница темы «Самоанализ»"
+                />
+              </figure>
+
+              <p class="after-figure">
+                Изначально я задумывала более широкую сетку из 10–12 категорий (вынося отдельно
+                «Публичные выступления», «Осознанность» и «Креативность»). Однако в процессе
+                проектирования стало понятно, что интерфейс перегружается, а темы начинают
+                дублировать друг друга по смыслу.
+              </p>
+              <p><strong>Почему текущая версия из 7 категорий — оптимальна:</strong></p>
+              <div class="card-row">
+                <div class="info-card">
+                  <h4>UX-гигиена</h4>
+                  <p>
+                    Список соответствует «числу Миллера» (7±2 объекта). Экран выбора тем на
+                    онбординге и табы в ленте считываются пользователем мгновенно, без лишнего
+                    скролла.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h4>Продуктовая логика</h4>
+                  <p>
+                    Я объединила близкие сущности в сильные контентные хабы. Например,
+                    <em>Креативность</em> стала логичным продолжением <em>Мышления</em> (как навык
+                    поиска нестандартных решений), а <em>Самоанализ</em> и <em>Осознанность</em>
+                    сформировали понятный блок <em>Ментального здоровья</em>.
+                  </p>
+                </div>
+              </div>
+
+              <details class="toggle">
+                <summary>Полный список тем с пояснением</summary>
+                <div class="table-wrap">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Категория в UI</th>
+                        <th scope="col">Что внутри</th>
+                        <th scope="col">Зачем в приложении?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <th scope="row">Коммуникация</th>
+                        <td>Обратная связь, переговоры, публичные выступления</td>
+                        <td>
+                          Базовый запрос Junior/Middle специалистов для экологичного общения с
+                          коллегами и презентации своих решений.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <th scope="row">Командная работа</th>
+                        <td>Коллаборация, организация, разрешение конфликтов</td>
+                        <td>
+                          Покрывает боли cross-functional взаимодействия. Учит договариваться внутри
+                          команды и организовывать процессы.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <th scope="row">Лидерство &amp; Менеджмент</th>
+                        <td>Управление командой, мотивация, делегирование</td>
+                        <td>
+                          Целевой блок для тимлидов и менеджеров. Помогает растить команду и
+                          выстраивать процессы.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <th scope="row">Мышление &amp; Анализ</th>
+                        <td>
+                          Критическое мышление &amp; Креативность, принятие решений, поиск
+                          когнитивных ловушек
+                        </td>
+                        <td>
+                          Самый быстрорастущий тренд в обучении. Учит отсекать инфошум, работать с
+                          данными и делать осознанные выводы в условиях неопределенности.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <th scope="row">Продуктивность</th>
+                        <td>Тайм-менеджмент, фокус, расстановка приоритетов</td>
+                        <td>
+                          Прямой ответ на боль Александры («часто отвлекаюсь»). Помогает
+                          пользователю настроить фокус на рабочие задачи.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <th scope="row">Самоанализ &amp; Ментальное здоровье</th>
+                        <td>Рефлексия, стрессоустойчивость, борьба с выгоранием</td>
+                        <td>
+                          Фундамент концепции «Slow Media». Помогает авторам справляться со страхом
+                          «недостаточной экспертности», а читателям — поддерживать баланс.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <th scope="row">Карьера &amp; Рост</th>
+                        <td>Нетворкинг, позиционирование, смена направления</td>
+                        <td>
+                          Практический блок для тех, кто ищет новую работу или хочет вырасти до
+                          топ-позиций.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </section>
+
+            <section class="case-section case-section--sub" id="scenarios">
+              <h3>Основные сценарии</h3>
+
+              <p class="flow-label">Читатель</p>
+              <ol class="flow">
+                <li>Находит интересующую тему</li>
+                <li>выбирает формат</li>
+                <li>читает или слушает материал</li>
+                <li>сохраняет полезное или подписывается на тему/автора</li>
+              </ol>
+              <figure class="case-figure">
+                <img
+                  src="images/03-scenario-reader.webp"
+                  width="799"
+                  height="526"
+                  loading="lazy"
+                  alt="Сценарий читателя: поиск, страница темы «Карьера & Рост», страница статьи"
+                />
+              </figure>
+
+              <hr class="case-divider" />
+
+              <p class="flow-label">Автор</p>
+              <ol class="flow">
+                <li>Создаёт публикацию</li>
+                <li>выбирает тему</li>
+                <li>публикует материал</li>
+                <li>получает обратную связь от сообщества</li>
+              </ol>
+              <figure class="case-figure">
+                <img
+                  src="images/04-scenario-author.webp"
+                  width="799"
+                  height="526"
+                  loading="lazy"
+                  alt="Сценарий автора: создание статьи, редактор текста, публикация"
+                />
+              </figure>
+            </section>
+
+            <section class="case-section case-section--sub" id="decisions">
+              <h3>Дизайн-решения</h3>
+
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Инсайт</span>
+                  <p>
+                    Пользователи теряют фокус в перегруженных лентах. Они отвлекаются на
+                    развлекательный контент, а полезные материалы тонут в алгоритмических лентах и
+                    множестве чатов.
+                  </p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Гипотеза</span>
+                  <p>Фильтрация по форматам и темам поможет быстрее находить релевантный контент.</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Решение</span>
+                  <p>
+                    Фильтр форматов (подкасты/статьи/видео) + механика подписок на конкретные темы.
+                    Это позволяет пользователю изолировать себя от лишнего шума и изучать только
+                    то, что нужно сейчас.
+                  </p>
+                </div>
+              </div>
+
+              <figure class="case-figure">
+                <img
+                  src="images/05-decisions-feed.webp"
+                  width="799"
+                  height="526"
+                  loading="lazy"
+                  alt="Лента с фильтром форматов, подписки на темы и авторов, страница темы «Самоанализ»"
+                />
+              </figure>
+
+              <p class="after-figure">
+                Каждый формат имеет свою структуру подачи — статья с превью и временем чтения,
+                видео с плеером, подкаст с серией эпизодов.
+              </p>
+              <figure class="case-figure">
+                <img
+                  src="images/06-formats-a.webp"
+                  width="526"
+                  height="526"
+                  loading="lazy"
+                  alt="Страница статьи с превью и страница видео с плеером"
+                />
+              </figure>
+              <figure class="case-figure">
+                <img
+                  src="images/07-formats-b.webp"
+                  width="526"
+                  height="526"
+                  loading="lazy"
+                  alt="Страница подкаста с серией эпизодов и страница подкаста с описанием"
+                />
+              </figure>
+
+              <hr class="case-divider" />
+
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Инсайт</span>
+                  <p>Авторов останавливает страх первой публикации, сложность интерфейса и алгоритмов.</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Гипотеза</span>
+                  <p>Простой процесс создания материала снизит барьер входа.</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Решение</span>
+                  <p>Я упростила структуру редактора и убрала лишние действия из сценария публикации.</p>
+                </div>
+              </div>
+
+              <figure class="case-figure">
+                <img
+                  src="images/08-editor.webp"
+                  width="799"
+                  height="526"
+                  loading="lazy"
+                  alt="Редактор статьи: поля названия и описания, выбор темы, форматирование текста"
+                />
+              </figure>
+
+              <p class="after-figure">
+                Добавила привычный формат сторис для коротких заметок, что также может снизить
+                порог вхождения — ведь необязательно создавать что-то объёмное.
+              </p>
+              <figure class="case-figure case-figure--small">
+                <img
+                  src="images/09-stories-avatars.webp"
+                  width="360"
+                  height="90"
+                  loading="lazy"
+                  alt="Лента сторис авторов в верхней части главной"
+                />
+              </figure>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/10-stories-editor.webp"
+                  width="776"
+                  height="511"
+                  loading="lazy"
+                  alt="Редактор сторис: ввод текста, публикация, рисование"
+                />
+              </figure>
+            </section>
+
+            <!-- UI дизайн -->
+            <section class="case-section case-section--group" id="ui">
+              <h2>UI дизайн</h2>
+            </section>
+
+            <section class="case-section case-section--sub" id="style">
+              <h3>Визуальный стиль</h3>
+              <p>
+                Визуальный стиль отражает идею Slow Media — минимум шума, только контент по теме.
+                Светлая палитра, мягкие формы и лаконичные иконки создают среду, где хочется
+                читать, а не бездумно скроллить.
+              </p>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/11-visual-style.webp"
+                  width="776"
+                  height="364"
+                  loading="lazy"
+                  alt="Экран плеера и карточки материалов с иллюстрациями и 3D-элементами в стиле Soft"
+                />
+              </figure>
+            </section>
+
+            <section class="case-section case-section--sub" id="uikit">
+              <h3>UI kit</h3>
+              <p>
+                UI kit позволяет мне поддерживать визуальную целостность проекта и упрощает работу
+                на всех этапах.
+              </p>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/12-ui-kit.webp"
+                  width="776"
+                  height="256"
+                  loading="lazy"
+                  alt="UI kit: кнопки, ссылки, переключатели, поля ввода и компоненты"
+                />
+              </figure>
+              <a
+                class="case-link-btn"
+                href="https://www.figma.com/design/XWpkaaIrWijxhCsnKqmpb2/Soft"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Полный UI kit в Figma</a
+              >
+            </section>
+          </div>
+        </div>
+
+        <!-- ============ Заключение ============ -->
+        <section class="case-conclusion" id="conclusion">
+          <div class="case-wrap band-grid">
+            <h2>Заключение</h2>
+            <div class="band-body">
+              <p>
+                Самым сложным в этом проекте было спроектировать продукт сразу для двух аудиторий с
+                разными задачами и ожиданиями — читателей и авторов.
+              </p>
+              <p>
+                Если бы проектировала Soft сейчас, начала бы с карты сценариев и структуры MVP —
+                чтобы быстрее сузить область и проверять решения на более раннем этапе.
+              </p>
+              <p>
+                Следующий шаг — юзабилити-тестирование: проверить навигацию, сценарий первой
+                публикации и главное — воспринимается ли Soft как пространство для развития, а не
+                как очередная соцсеть.
+              </p>
+              <a class="case-back" href="../../#projects">Вернуться в портфолио</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" aria-label="Контакты и футер">
+        <div class="footer-content">
+          <img
+            class="footer-doodle"
+            src="../../images/envelope.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h2>буду рада познакомиться!</h2>
+
+          <div class="footer-row">
+            <div class="footer-links footer-left">
+              <a href="../../">главная</a>
+              <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+            </div>
+
+            <div class="footer-links footer-right">
+              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+              <a href="mailto:sofaevt@gmail.com">gmail</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Кнопка «наверх» -->
+    <button class="to-top" id="to-top" type="button" aria-label="Наверх">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <path
+          d="M9 15V3M9 3L3.5 8.5M9 3l5.5 5.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <!-- Просмотр картинок по клику -->
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+      <button class="lightbox-close" type="button" aria-label="Закрыть">✕</button>
+      <img alt="" />
+    </dialog>
+
+    <script>
+      (function () {
+        /* --- Просмотр картинок --- */
+        var dlg = document.getElementById("lightbox");
+        if (dlg && typeof dlg.showModal === "function") {
+          var big = dlg.querySelector("img");
+          document.querySelectorAll(".case-figure img").forEach(function (img) {
+            img.addEventListener("click", function () {
+              big.src = img.currentSrc || img.src;
+              big.alt = img.alt;
+              big.classList.remove("is-zoomed");
+              dlg.showModal();
+            });
+          });
+          big.addEventListener("click", function () {
+            big.classList.toggle("is-zoomed");
+          });
+          dlg.addEventListener("click", function (e) {
+            if (e.target === dlg || e.target.classList.contains("lightbox-close")) dlg.close();
+          });
+        }
+
+        /* --- Содержание: подсветка текущего раздела --- */
+        var links = Array.prototype.slice.call(
+          document.querySelectorAll('.case-toc a[href^="#"]')
+        );
+        var targets = links.map(function (a) {
+          return document.getElementById(a.getAttribute("href").slice(1));
+        });
+        function updateToc() {
+          var line = window.innerHeight * 0.3;
+          var current = -1;
+          targets.forEach(function (t, i) {
+            if (t && t.getBoundingClientRect().top <= line) current = i;
+          });
+          links.forEach(function (a, i) {
+            a.classList.toggle("is-active", i === current);
+          });
+        }
+
+        /* --- Кнопка «наверх» --- */
+        var toTop = document.getElementById("to-top");
+        function updateTop() {
+          toTop.classList.toggle("is-visible", window.scrollY > 700);
+        }
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        function onScroll() {
+          updateToc();
+          updateTop();
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        onScroll();
+      })();
+    </script>
+  </body>
+</html>
