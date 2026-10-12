@@ -8,6 +8,7 @@
   --line: rgba(27, 27, 25, 0.14);
   --line-strong: rgba(27, 27, 25, 0.22);
   --lavender-soft: #e7dcf7;
+  --marker: #d8c8f1; /* цвет маркера в содержании */
 
   --rail: 200px; /* ширина колонки с содержанием */
   --rail-gap: 64px;
@@ -200,19 +201,28 @@ html {
   list-style: none;
 }
 
-.case-toc a {
-  display: block;
-  padding: 5px 0 5px 12px;
-  border-left: 2px solid transparent;
+.case-toc li {
+  padding: 4px 0;
   font-size: 0.9375rem;
-  line-height: 1.35;
-  color: var(--muted-soft);
-  transition: color 150ms ease, border-color 150ms ease;
+  line-height: 1.45;
 }
 
-.case-toc ol ol a {
-  padding-left: 26px;
+.case-toc ol ol {
+  padding-left: 14px;
+}
+
+.case-toc ol ol li {
   font-size: 0.875rem;
+}
+
+/* активный пункт подчёркнут маркером; вес и размер не меняются */
+.case-toc a {
+  font-weight: 500;
+  color: var(--muted-soft);
+  background-image: linear-gradient(transparent 58%, var(--marker) 58%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: color 150ms ease, background-size 250ms ease;
 }
 
 .case-toc a:hover {
@@ -221,8 +231,7 @@ html {
 
 .case-toc a.is-active {
   color: var(--text);
-  font-weight: 600;
-  border-left-color: var(--lavender);
+  background-size: 100% 100%;
 }
 
 .case-toc a:focus-visible,
@@ -268,6 +277,19 @@ html {
 
 .case-content h3:not(:first-child) {
   margin-top: 56px;
+}
+
+/* заголовки ключевых разделов — плашки */
+.case-content .case-section--sub > h3 {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 20px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--lavender);
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .case-content p,
@@ -450,13 +472,13 @@ html {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
   cursor: zoom-in;
 }
 
 .case-figure figcaption {
   margin-top: 12px;
-  text-align: center;
+  text-align: left;
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--muted-soft);
@@ -465,7 +487,7 @@ html {
 .case-figure--row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 40px;
 }
 
@@ -481,6 +503,13 @@ html {
 
 .case-figure--diagram img[src*="structure-ia"] {
   max-width: 680px;
+}
+
+.case-divider {
+  height: 1px;
+  margin: 64px 0 56px;
+  border: 0;
+  background: var(--line);
 }
 
 /* ==========================================================
@@ -512,36 +541,6 @@ html {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin: 40px 0 56px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 20px;
-}
-
-.stat-num {
-  font-size: clamp(2.75rem, 5vw, 4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-  font-weight: 600;
-  color: var(--lavender);
-}
-
-.stat-label {
-  font-size: 0.9375rem;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.72);
-}
-
 .case-result .band-body h3 {
   margin: 0 0 20px;
   font-size: 1.5rem;
@@ -560,19 +559,21 @@ html {
 
 .decisions li {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 8px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
   padding: 20px 24px;
   border-radius: 16px;
   background: #262626;
 }
 
-.decision-num {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1.7;
-  color: var(--lavender);
+/* иконка-звёздочка: форма из images/sparkle.svg, цвет задаётся здесь */
+.decision-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--lavender);
+  -webkit-mask: url("../images/sparkle.svg") center / contain no-repeat;
+  mask: url("../images/sparkle.svg") center / contain no-repeat;
 }
 
 .case-result .decisions p {
@@ -805,14 +806,18 @@ body:has(dialog[open]) {
     gap: 24px;
   }
 
-  .stats {
-    grid-template-columns: minmax(0, 1fr);
-    margin: 32px 0 44px;
+  .decisions li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    padding: 18px 20px;
   }
 
-  .decisions li {
-    grid-template-columns: 40px minmax(0, 1fr);
-    padding: 18px 20px;
+  .decision-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .case-divider {
+    margin: 48px 0 40px;
   }
 
   .case-result,
