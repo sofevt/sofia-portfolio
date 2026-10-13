@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Яндекс Карты + Погода — кейс продуктового дизайнера</title>
+    <meta
+      name="description"
+      content="Исследование влияния погоды на навигационные сценарии и концепция интеграции погодного контекста в Яндекс Карты: интервью, гипотеза, прототип, юзабилити-тестирование."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Яндекс Карты + Погода — кейс продуктового дизайнера" />
+    <meta
+      property="og:description"
+      content="Полный цикл продуктовой задачи: от интервью и гипотезы до прототипа, юзабилити-тестирования и дизайн-спецификации."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../case-study.css" />
+  </head>
+  <body class="case-page">
+    <div class="page-shell" id="top">
+      <header class="site-header">
+        <nav class="nav nav-left" aria-label="Основная навигация">
+          <a href="../../">главная</a>
+          <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+        </nav>
+
+        <nav class="nav nav-right" aria-label="Контакты">
+          <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+          <a href="mailto:sofaevt@gmail.com">gmail</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- ============ Шапка кейса ============ -->
+        <section class="case-hero" aria-label="О проекте">
+          <div class="case-wrap case-hero-grid">
+            <div class="case-hero-title">
+              <h1>Яндекс Карты + Погода</h1>
+              <p class="case-lead">
+                Исследование влияния погодных условий на навигационные сценарии и концепция
+                интеграции погодного контекста в Яндекс Карты
+              </p>
+            </div>
+
+            <dl class="case-props">
+              <div>
+                <dt>Тип</dt>
+                <dd>
+                  <ul class="case-tags" aria-label="Теги проекта">
+                    <li>Учебный проект</li>
+                    <li>UX Research</li>
+                    <li>Feature Design</li>
+                    <li>Mobile</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Роль</dt>
+                <dd>UX/UI-дизайнер</dd>
+              </div>
+              <div>
+                <dt>Период</dt>
+                <dd>Зима 2025 – весна 2026</dd>
+              </div>
+              <div>
+                <dt>Что сделано</dt>
+                <dd>
+                  Интервью и инсайты, гипотеза, концепция, кликабельный прототип,
+                  юзабилити-тестирование, дизайн-спецификация
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <div class="case-wrap">
+          <figure class="case-figure case-figure--hero">
+            <img
+              src="images/01-hero.webp"
+              width="817"
+              height="523"
+              alt="Экран построения пешего маршрута в Яндекс Картах с погодным предупреждением о сильном дожде"
+            />
+          </figure>
+        </div>
+
+        <!-- ============ Текст кейса: слева содержание, справа контент ============ -->
+        <div class="case-wrap case-layout">
+          <aside class="case-rail" aria-label="Содержание">
+            <nav class="case-toc" aria-label="Разделы кейса">
+              <p class="toc-title">Содержание</p>
+              <ol>
+                <li><a href="#problem">Определение проблемы</a></li>
+                <li>
+                  <a href="#research">Исследование</a>
+                  <ol>
+                    <li><a href="#insights">Инсайты</a></li>
+                    <li><a href="#problem-statement">Формулировка проблемы</a></li>
+                    <li><a href="#hypothesis">Гипотеза</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#solution">Решение</a>
+                  <ol>
+                    <li><a href="#flow">User flow</a></li>
+                    <li><a href="#messages">Примеры сообщений</a></li>
+                  </ol>
+                </li>
+                <li><a href="#testing">Юзабилити-тестирование</a></li>
+                <li><a href="#spec">Дизайн-спецификация</a></li>
+                <li><a href="#conclusion">Заключение</a></li>
+              </ol>
+            </nav>
+          </aside>
+
+          <div class="case-content">
+            <!-- 1 спринт — определение проблемы -->
+            <section class="case-section case-section--group" id="problem">
+              <h2>1 спринт — Определение проблемы</h2>
+              <p class="lead">
+                «Пользователи часто сталкиваются с препятствиями, когда решают свои задачи.
+                Продукт должен помогать справиться с ними» — факт. Таким препятствием, например,
+                может оказаться погода 🌧
+              </p>
+              <aside class="callout">
+                <span class="callout-icon" aria-hidden="true">👀</span>
+                <p>
+                  Работа началась с предпосылки: <strong>погода влияет на навигацию и сценарии
+                  пользователя</strong>. Поэтому Яндекс Карты хотят интегрировать сервис Погода,
+                  чтобы помогать пользователям эффективнее решать задачи навигации.
+                </p>
+              </aside>
+            </section>
+
+            <section class="case-section case-section--sub" id="goal">
+              <h3>Цель и план работы</h3>
+              <p>
+                Исследовать, как погодные условия влияют на поведение пользователей (и влияют ли
+                вообще), и понять, каким образом этот контекст можно встроить в пользовательский
+                опыт Яндекс Карт.
+              </p>
+              <p>Работа проходила в несколько этапов:</p>
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Этап 1</span>
+                  <p>
+                    Командный. Я и ещё три дизайнера объединились в исследовании пользовательского
+                    опыта: мы проводили глубинные интервью и определяли проблемы пользователей
+                    карт.
+                  </p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Этап 2</span>
+                  <p>
+                    После этого я продолжила работу самостоятельно — анализировала интервью,
+                    сформулировала инсайты и гипотезы, спроектировала концепцию решения, создала
+                    кликабельный прототип и дополнительно пообщалась с респондентами.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Исследование -->
+            <section class="case-section case-section--group" id="research">
+              <h2>Исследование</h2>
+              <p><strong>Предположения:</strong></p>
+              <ul class="chips">
+                <li>погода влияет на выбор маршрута и транспорта</li>
+                <li>пользователям может не хватать погодного контекста во время построения маршрута</li>
+                <li>погодные рекомендации могут помочь принимать более осознанные решения в пути</li>
+              </ul>
+              <p class="after-chips">
+                Для проверки гипотез были проведены интервью с пользователями разных сценариев
+                передвижения: пешеходами, водителями и людьми с регулярными городскими маршрутами.
+              </p>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/02-research-boards.webp"
+                  width="776"
+                  height="542"
+                  loading="lazy"
+                  alt="Исследовательские доски по интервью: профили респондентов, ключевые моменты и заметки"
+                />
+              </figure>
+            </section>
+
+            <section class="case-section case-section--sub" id="insights">
+              <h3>Инсайты</h3>
+              <div class="card-row card-row--1">
+                <div class="info-card">
+                  <h4>Погода редко влияет на сам факт выхода из дома</h4>
+                  <p>Она влияет на другое:</p>
+                  <ul class="chips chips--inline">
+                    <li>выбор транспорта</li>
+                    <li>время выхода</li>
+                    <li>подготовку к поездке</li>
+                  </ul>
+                </div>
+                <div class="info-card">
+                  <h4>Полный прогноз перед маршрутом смотрят далеко не все</h4>
+                  <p>
+                    Для привычных поездок большинство ориентируется на ситуацию «здесь и сейчас», а
+                    не открывает погодное приложение.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h4>
+                    Во время построения маршрута пользователь думает прежде всего о времени,
+                    стоимости и удобстве
+                  </h4>
+                  <p>
+                    Погодный фактор становится важным только тогда, когда способен изменить одно из
+                    этих решений.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-section case-section--sub" id="problem-statement">
+              <h3>Формулировка проблемы</h3>
+              <div class="challenge challenge--plain">
+                <p>
+                  Навигационный сервис помогает выбрать оптимальный маршрут, но
+                  <mark>не учитывает погодный контекст</mark>, который может повлиять на выбор
+                  транспорта, время выхода или комфорт поездки.
+                </p>
+              </div>
+            </section>
+
+            <section class="case-section case-section--sub" id="hypothesis">
+              <h3>Приоритетная гипотеза</h3>
+              <p>Мы предполагаем, что:</p>
+              <div class="row-card">
+                <div class="row-item">
+                  <span class="row-label">Изменение</span>
+                  <p>интеграция погодных сигналов в контексте маршрута</p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Эффект</span>
+                  <p>
+                    повлияет на увеличение осознанных действий пользователей (смена маршрута, выбор
+                    альтернативного транспорта, вызов такси) и снизит фрустрацию от задержек из-за
+                    погоды,
+                  </p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Для кого</span>
+                  <p>
+                    для людей, строящих маршруты в условиях ухудшающейся погоды (особенно пешком, на
+                    велосипеде/самокате),
+                  </p>
+                </div>
+                <div class="row-item">
+                  <span class="row-label">Почему</span>
+                  <p>
+                    потому что приложение будет предупреждать о влиянии погоды на маршрут в понятной
+                    форме («+X мин», «лужи на дорогах», «рекомендуем транспорт»), повышая
+                    осведомлённость.
+                  </p>
+                </div>
+              </div>
+
+              <aside class="callout callout--after">
+                <span class="callout-icon" aria-hidden="true">👀</span>
+                <p>
+                  <strong>Ключевая метрика:</strong> количество переходов с вкладки «Пешком» на
+                  <strong>«Такси»</strong> или <strong>«Транспорт»</strong> ÷ общее количество
+                  построенных пеших маршрутов.
+                </p>
+              </aside>
+
+              <p class="after-figure">
+                Предупреждение о погодном риске (активном или вероятном) может склонить пешехода
+                вызвать Такси <em>(+Транзакция)</em> ради комфорта или воспользоваться Метро
+                <em>(+Активность в сервисе Транспорта)</em>.
+              </p>
+            </section>
+
+            <!-- Решение -->
+            <section class="case-section case-section--group" id="solution">
+              <h2>Решение</h2>
+              <p class="lead">
+                Погодные подсказки встроены в сценарий построения маршрута и отображаются при
+                наличии погодных рисков на пути.
+              </p>
+              <p>Это дополняет навигацию, не меняя привычный сценарий взаимодействия с картами.</p>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/03-modes.webp"
+                  width="776"
+                  height="517"
+                  loading="lazy"
+                  alt="Погодные баннеры для разных видов транспорта вокруг экрана маршрута: велосипед, автомобиль, пешком, самокат"
+                />
+              </figure>
+              <div class="challenge challenge--plain challenge--spaced">
+                <p>
+                  Подсказки не отвлекают от основного функционала — лишь показывают, как это может
+                  отразиться на маршруте.
+                </p>
+              </div>
+            </section>
+
+            <section class="case-section case-section--sub" id="flow">
+              <h3>User Flow</h3>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/04-flow-start.webp"
+                  width="776"
+                  height="537"
+                  loading="lazy"
+                  alt="Пользователь открывает приложение и вводит адрес назначения"
+                />
+              </figure>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/05-flow-system.webp"
+                  width="776"
+                  height="395"
+                  loading="lazy"
+                  alt="Система рассчитывает маршруты и делает запрос к погодному API"
+                />
+              </figure>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/06-flow-attention.webp"
+                  width="776"
+                  height="395"
+                  loading="lazy"
+                  alt="Пользователь замечает иконку погоды и раскрывает подробности маршрута"
+                />
+              </figure>
+              <figure class="case-figure">
+                <img
+                  src="images/07-decision.webp"
+                  width="480"
+                  height="472"
+                  loading="lazy"
+                  alt="Пользователь принимает решение: вариант А, вариант B или вариант C"
+                />
+              </figure>
+            </section>
+
+            <section class="case-section case-section--sub" id="messages">
+              <h3>Примеры сообщений</h3>
+              <div class="msg-row">
+                <figure class="case-figure">
+                  <img
+                    src="images/08-msg-wind.webp"
+                    width="380"
+                    height="181"
+                    loading="lazy"
+                    alt="Баннер «Сильный ветер 15 м/с»"
+                  />
+                </figure>
+                <div class="quote-card">
+                  <span class="quote-icon" aria-hidden="true">🙋🏻</span>
+                  <p>Пожалуй, сегодня без самокатов, доеду на метро... Опыт падений есть, больше не надо</p>
+                </div>
+              </div>
+              <div class="msg-row">
+                <figure class="case-figure">
+                  <img
+                    src="images/09-msg-rain.webp"
+                    width="380"
+                    height="181"
+                    loading="lazy"
+                    alt="Баннер «Сильный дождь через час»"
+                  />
+                </figure>
+                <div class="quote-card">
+                  <span class="quote-icon" aria-hidden="true">🙋🏻</span>
+                  <p>Лучше потороплюсь домой, не хочется попасть под дождь на велосипеде</p>
+                </div>
+              </div>
+              <div class="msg-row">
+                <figure class="case-figure">
+                  <img
+                    src="images/10-msg-heat.webp"
+                    width="380"
+                    height="181"
+                    loading="lazy"
+                    alt="Баннер «Жара, ощущается как +35°C»"
+                  />
+                </figure>
+                <div class="quote-card">
+                  <span class="quote-icon" aria-hidden="true">🙋🏻</span>
+                  <p>Не буду выходить сейчас, пережду пик жары в кофейне, потом для поездки выберу такси с кондиционером</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Юзабилити-тестирование -->
+            <section class="case-section case-section--group" id="testing">
+              <h2>Юзабилити-тестирование</h2>
+              <p>
+                Когда была готова первая версия макетов, я создала кликабельный прототип, чтобы
+                показать его респондентам. Им удалось потыкать, а мне — понаблюдать и получить их
+                комментарии.
+              </p>
+
+              <details class="toggle">
+                <summary>Памятка для тестирования: вопросы и критерии успеха</summary>
+                <div class="toggle-body">
+                  <p class="flow-label">Исследование</p>
+                  <p>
+                    Модерируемое юзабилити-тестирование (Think Aloud / «мысли вслух»). 5
+                    респондентов (4 женщины, 1 мужчина) в возрасте 16–45 лет, активные пользователи
+                    Яндекс Карт (хотя бы 3 раза в неделю), использующие разные виды транспорта.
+                  </p>
+
+                  <p class="flow-label">Гипотезы</p>
+                  <div class="row-card">
+                    <div class="row-item">
+                      <span class="row-label">H1</span>
+                      <p>Пользователи обращают внимание на иконки погоды в превью маршрутов.</p>
+                    </div>
+                    <div class="row-item">
+                      <span class="row-label">H2</span>
+                      <p>Пользователи понимают, что график в баннере — это прогноз на ближайшие 6 часов.</p>
+                    </div>
+                    <div class="row-item">
+                      <span class="row-label">H3</span>
+                      <p>
+                        Контекстные сообщения (про комфорт в такси или лужи для пешеходов) влияют на
+                        выбор способа передвижения.
+                      </p>
+                    </div>
+                    <div class="row-item">
+                      <span class="row-label">H4</span>
+                      <p>
+                        Кнопка перехода в Яндекс Погоду в конце таймлайна считывается как логичное
+                        продолжение сценария.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="flow-label">Задачи и вопросы</p>
+                  <p>«Задача: доехать до работы. Выбери самый подходящий вариант маршрута. Объясни свой выбор».</p>
+                  <p>
+                    «(Пользователь обратил внимание на иконку) Как ты думаешь, когда дождь закончится
+                    или станет слабее? Можешь ли ты узнать прогноз на завтра? Нужно ли это тебе?»
+                  </p>
+                  <p>«Покажи, как ты обычно строишь маршрут. Что влияет на твоё решение?»</p>
+
+                  <p class="flow-label">Критерии успеха</p>
+                  <p>Пользователь заметил иконку/бейдж или открыл без подсказки.</p>
+                  <p>Пользователь верно интерпретировал влияние (включая +N).</p>
+                  <p>
+                    Пользователь изменил маршрут или сознательно решил не менять маршрут — и
+                    объяснил почему.
+                  </p>
+                </div>
+              </details>
+
+              <div class="table-wrap table-wrap--plain">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Респондент</th>
+                      <th scope="col">Основные заметки</th>
+                      <th scope="col">Доработки</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        Респондент 1
+                        <span class="cell-note">работает в офисе, использует карты для построения маршрутов в новые места</span>
+                      </th>
+                      <td>
+                        Вопросы к формулировкам (смутило, что описаны условия в транспорте в пешем
+                        маршруте)
+                      </td>
+                      <td>Уточнены формулировки сообщений</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        Респондент 2
+                        <span class="cell-note">мама, чаще передвигается пешком или на общественном транспорте</span>
+                      </th>
+                      <td>
+                        Когда нужно изучить расписание общественного транспорта, хотелось убрать
+                        погодный баннер
+                      </td>
+                      <td>Баннер теперь можно свернуть</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        Респондент 3
+                        <span class="cell-note">программист, работает удалённо, использует карты для пеших прогулок</span>
+                      </th>
+                      <td>Не хватило наглядных рамок для погодного условия</td>
+                      <td>
+                        Добавлен таймлайн на ближайшие 6 часов + возможность перейти в приложение
+                        Яндекс.Погода (если приложение не скачано — бесшовная веб-версия)
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        Респондент 4
+                        <span class="cell-note">использует карты для поездок на самокате и велосипеде к друзьям</span>
+                      </th>
+                      <td>Понравилось, что для каждого маршрута контекст уведомлений различается</td>
+                      <td>—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <figure class="case-figure">
+                <img
+                  src="images/11-testing-result.webp"
+                  width="560"
+                  height="407"
+                  loading="lazy"
+                  alt="После тестирования: погодный баннер на велосипедном маршруте и свёрнутый баннер на маршруте общественным транспортом"
+                />
+              </figure>
+            </section>
+
+            <!-- Дизайн-спецификация -->
+            <section class="case-section" id="spec">
+              <h2>Дизайн-спецификация</h2>
+              <p>
+                Последним шагом стала подготовка макетов к передаче в разработку: в Figma я создала
+                спецификацию, где подробнее описала задумку и компоненты разработчику.
+              </p>
+              <p class="muted-note">
+                А ещё увлеклась и продумала варианты текста для каждого условия и транспорта.
+              </p>
+              <figure class="case-figure case-figure--wide">
+                <img
+                  src="images/12-spec.webp"
+                  width="776"
+                  height="479"
+                  loading="lazy"
+                  alt="Таблицы с вариантами текста для разных типов риска и видов транспорта: осадки, снег, другие риски"
+                />
+              </figure>
+            </section>
+          </div>
+        </div>
+
+        <!-- ============ Заключение ============ -->
+        <section class="case-conclusion" id="conclusion">
+          <div class="case-wrap band-grid">
+            <h2>Заключение</h2>
+            <div class="band-body">
+              <p>
+                Этот проект стал для меня возможностью пройти полный цикл работы над продуктовой
+                задачей.
+              </p>
+              <p>
+                Думаю, главный вывод, который я забрала с собой после этого проекта, — иногда
+                ценность новой функции не в том, чтобы её заметили, а в том, чтобы она естественно
+                стала частью уже привычного сценария.
+              </p>
+              <a class="case-back" href="../../#projects">Вернуться в портфолио</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" aria-label="Контакты и футер">
+        <div class="footer-content">
+          <img
+            class="footer-doodle"
+            src="../../images/envelope.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h2>буду рада познакомиться!</h2>
+
+          <div class="footer-row">
+            <div class="footer-links footer-left">
+              <a href="../../">главная</a>
+              <a href="../../cv.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+            </div>
+
+            <div class="footer-links footer-right">
+              <a href="https://t.me/sofevt" target="_blank" rel="noopener noreferrer">telegram</a>
+              <a href="mailto:sofaevt@gmail.com">gmail</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Кнопка «наверх» -->
+    <button class="to-top" id="to-top" type="button" aria-label="Наверх">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <path
+          d="M9 15V3M9 3L3.5 8.5M9 3l5.5 5.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <!-- Просмотр картинок по клику -->
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+      <button class="lightbox-close" type="button" aria-label="Закрыть">✕</button>
+      <img alt="" />
+    </dialog>
+
+    <script>
+      (function () {
+        /* --- Просмотр картинок --- */
+        var dlg = document.getElementById("lightbox");
+        if (dlg && typeof dlg.showModal === "function") {
+          var big = dlg.querySelector("img");
+          document.querySelectorAll(".case-figure img").forEach(function (img) {
+            img.addEventListener("click", function () {
+              big.src = img.currentSrc || img.src;
+              big.alt = img.alt;
+              big.classList.remove("is-zoomed");
+              dlg.showModal();
+            });
+          });
+          big.addEventListener("click", function () {
+            big.classList.toggle("is-zoomed");
+          });
+          dlg.addEventListener("click", function (e) {
+            if (e.target === dlg || e.target.classList.contains("lightbox-close")) dlg.close();
+          });
+        }
+
+        /* --- Содержание: подсветка текущего раздела --- */
+        var links = Array.prototype.slice.call(
+          document.querySelectorAll('.case-toc a[href^="#"]')
+        );
+        var targets = links.map(function (a) {
+          return document.getElementById(a.getAttribute("href").slice(1));
+        });
+        function updateToc() {
+          var line = window.innerHeight * 0.3;
+          var current = -1;
+          targets.forEach(function (t, i) {
+            if (t && t.getBoundingClientRect().top <= line) current = i;
+          });
+          links.forEach(function (a, i) {
+            a.classList.toggle("is-active", i === current);
+          });
+        }
+
+        /* --- Кнопка «наверх» --- */
+        var toTop = document.getElementById("to-top");
+        function updateTop() {
+          toTop.classList.toggle("is-visible", window.scrollY > 700);
+        }
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        function onScroll() {
+          updateToc();
+          updateTop();
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        onScroll();
+      })();
+    </script>
+  </body>
+</html>
