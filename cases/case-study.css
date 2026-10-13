@@ -1064,7 +1064,7 @@ body:has(dialog[open]) {
 
 .jtbd-key {
   font-weight: 600;
-  color: var(--lavender-text);
+  color: var(--text);
 }
 
 /* карточки с рядами: JTBD, инсайт → гипотеза → решение */
