@@ -1189,3 +1189,9 @@ body:has(dialog[open]) {
     gap: 4px;
   }
 }
+
+/* небольшая вертикальная картинка с телефоном (например, в заключении) */
+.case-figure--phone img {
+  width: 300px;
+  max-width: 100%;
+}
