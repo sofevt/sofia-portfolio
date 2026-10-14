@@ -799,7 +799,7 @@ body:has(dialog[open]) {
   }
 
   .decisions li {
-    grid-template-columns: 32px minmax(0, 1fr);
+
     padding: 18px 20px;
   }
 
