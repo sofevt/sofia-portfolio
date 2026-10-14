@@ -549,7 +549,7 @@ html {
 
 .decisions li {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  
   gap: 16px;
   align-items: center;
   padding: 20px 24px;
