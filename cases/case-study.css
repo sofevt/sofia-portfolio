@@ -1081,17 +1081,22 @@ body:has(dialog[open]) {
 
 .row-item {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-columns: 104px minmax(0, 1fr);
   gap: 16px;
-  align-items: baseline;
+  align-items: start;
 }
 
 .row-label {
+  justify-self: start;
+  margin-top: 2px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: var(--lavender-soft);
   font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--lavender-text);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--text);
 }
 
 .case-content .row-item p {
@@ -1288,17 +1293,6 @@ body:has(dialog[open]) {
   color: var(--text);
 }
 
-/* таблица результатов без внешнего отступа сверху тоггла */
-.table-wrap--plain {
-  margin-top: 28px;
-}
-
-.data-table .cell-note {
-  display: block;
-  margin-top: 4px;
-  font-weight: 400;
-  color: var(--muted-soft);
-}
 
 /* содержимое тоггла: ряды без второй рамки */
 .toggle-body .row-card {
@@ -1324,7 +1318,7 @@ body:has(dialog[open]) {
 
 /* кот из командного чата рядом с описанием этапа */
 .row-item--media {
-  grid-template-columns: 96px minmax(0, 1fr) 220px;
+  grid-template-columns: 104px minmax(0, 1fr) 220px;
   align-items: start;
 }
 
@@ -1338,36 +1332,6 @@ body:has(dialog[open]) {
   border-radius: 12px;
 }
 
-/* стикеры в таблице результатов */
-.data-table td.has-sticker {
-  position: relative;
-  min-height: 72px;
-  padding-bottom: 56px;
-}
-
-.cell-sticker {
-  position: absolute;
-  height: auto;
-  pointer-events: none;
-}
-
-.cell-sticker--br {
-  right: 14px;
-  bottom: 10px;
-  width: 34px;
-}
-
-.cell-sticker--cloud {
-  left: -22px;
-  bottom: 10px;
-  width: 48px;
-}
-
-.cell-sticker--bl {
-  left: 14px;
-  bottom: 10px;
-  width: 45px;
-}
 
 .sr-only {
   position: absolute;
