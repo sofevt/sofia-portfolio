@@ -47,7 +47,7 @@ html {
   font-size: clamp(2.75rem, 5.2vw, 4.5rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .case-lead {
@@ -190,7 +190,7 @@ html {
 .toc-title {
   margin: 0 0 14px;
   font-size: 0.8125rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted-soft);
@@ -265,7 +265,7 @@ html {
   font-size: 2rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .case-content h3 {
@@ -273,7 +273,7 @@ html {
   font-size: 1.5rem;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .case-content h3:not(:first-child) {
@@ -325,7 +325,7 @@ html {
   border-radius: 8px;
   background: var(--lavender-soft);
   font-size: 0.8125rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   vertical-align: middle;
 }
@@ -879,7 +879,7 @@ body:has(dialog[open]) {
   font-size: 1.0625rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .case-content .info-card p {
@@ -918,17 +918,17 @@ body:has(dialog[open]) {
 
 .data-table thead th {
   border-bottom: 1px solid var(--line-strong);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
 }
 
 .data-table tbody th {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
 }
 
 .data-table strong {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -1031,7 +1031,7 @@ body:has(dialog[open]) {
   font-size: 1.0625rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .persona .toggle-body {
@@ -1110,7 +1110,7 @@ body:has(dialog[open]) {
   margin: 0 0 12px;
   font-size: 1.0625rem;
   line-height: 1.3;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text);
 }
@@ -1209,5 +1209,186 @@ body:has(dialog[open]) {
 @media (max-width: 600px) {
   .case-content .case-figure + .flow-label {
     margin-top: 56px;
+  }
+}
+
+/* ==========================================================
+   Компоненты для кейса «Яндекс Карты + Погода»
+   ========================================================== */
+.card-row--1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* крупная фраза без подписи (формулировка проблемы, решение) */
+.case-content .challenge--plain {
+  margin: 0;
+}
+
+.case-content .challenge--plain p {
+  margin: 0;
+}
+
+.case-content .challenge--spaced {
+  margin-top: 56px;
+}
+
+/* чипы внутри карточки */
+.chips--inline {
+  margin-top: 12px;
+}
+
+.case-content .after-chips {
+  margin-top: 24px;
+}
+
+.case-content .muted-note {
+  margin-top: -4px;
+  color: var(--muted-soft);
+}
+
+/* пример сообщения + реакция пользователя */
+.msg-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.msg-row .case-figure {
+  margin: 0;
+}
+
+.msg-row .case-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.quote-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.quote-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.case-content .quote-card p {
+  max-width: none;
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* таблица результатов без внешнего отступа сверху тоггла */
+.table-wrap--plain {
+  margin-top: 28px;
+}
+
+.data-table .cell-note {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: var(--muted-soft);
+}
+
+/* содержимое тоггла: ряды без второй рамки */
+.toggle-body .row-card {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.toggle-body .flow-label {
+  margin-top: 28px;
+}
+
+.toggle-body .flow-label:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .msg-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* кот из командного чата рядом с описанием этапа */
+.row-item--media {
+  grid-template-columns: 96px minmax(0, 1fr) 220px;
+  align-items: start;
+}
+
+.row-item--media .case-figure {
+  margin: 0;
+}
+
+.row-item--media .case-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* стикеры в таблице результатов */
+.data-table td.has-sticker {
+  position: relative;
+  min-height: 72px;
+  padding-bottom: 56px;
+}
+
+.cell-sticker {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.cell-sticker--br {
+  right: 14px;
+  bottom: 10px;
+  width: 34px;
+}
+
+.cell-sticker--cloud {
+  left: -22px;
+  bottom: 10px;
+  width: 48px;
+}
+
+.cell-sticker--bl {
+  left: 14px;
+  bottom: 10px;
+  width: 45px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .row-item--media {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .row-item--media .case-figure {
+    max-width: 240px;
+    margin-top: 8px;
   }
 }
