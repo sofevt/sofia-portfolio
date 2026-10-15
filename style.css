@@ -145,6 +145,15 @@ img {
   margin: 44px 0 48px;
 }
 
+/* небольшая приписка под подзаголовком (опыт) */
+.hero-note {
+  max-width: 34em;
+  margin: 28px 0 0;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: rgba(27, 27, 25, 0.65);
+}
+
 /* ==========================================================
    Проекты
    ========================================================== */
@@ -330,7 +339,8 @@ img {
   .site-header {
     padding-top: 24px;
   }
-     .project-arrow {
+
+  .project-arrow {
     width: 28px;
   }
 
@@ -341,6 +351,11 @@ img {
 
   .hero-doodle {
     margin: 32px 0;
+  }
+
+  .hero-note {
+    margin-top: 20px;
+    font-size: 1rem;
   }
 
   .projects-section {
