@@ -549,7 +549,7 @@ html {
 
 .decisions li {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  
   gap: 16px;
   align-items: center;
   padding: 20px 24px;
@@ -557,14 +557,6 @@ html {
   background: #262626;
 }
 
-/* иконка-звёздочка: форма из images/sparkle.svg, цвет задаётся здесь */
-.decision-icon {
-  width: 44px;
-  height: 44px;
-  background: var(--white);
-  -webkit-mask: url("../images/sparkle.svg") center / contain no-repeat;
-  mask: url("../images/sparkle.svg") center / contain no-repeat;
-}
 
 .case-result .decisions p {
   max-width: none;
@@ -799,7 +791,6 @@ body:has(dialog[open]) {
   }
 
   .decisions li {
-    grid-template-columns: 32px minmax(0, 1fr);
     padding: 18px 20px;
   }
 
