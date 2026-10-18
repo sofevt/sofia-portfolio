@@ -187,13 +187,9 @@ html {
   overflow-y: auto;
 }
 
+/* заголовок «Содержание» не показываем */
 .toc-title {
-  margin: 0 0 14px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-soft);
+  display: none;
 }
 
 .case-toc ol {
@@ -202,18 +198,17 @@ html {
   list-style: none;
 }
 
+/* один ритм: 8px между любыми соседними пунктами, подпункты без отступа слева */
 .case-toc li {
-  padding: 4px 0;
+  margin: 0;
+  padding: 0;
   font-size: 0.9375rem;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
-.case-toc ol ol {
-  padding-left: 14px;
-}
-
-.case-toc ol ol li {
-  font-size: 0.875rem;
+.case-toc li + li,
+.case-toc li > ol {
+  margin-top: 8px;
 }
 
 /* активный пункт подчёркнут маркером; вес и размер не меняются */
@@ -224,6 +219,11 @@ html {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   transition: color 150ms ease, background-size 250ms ease;
+}
+
+/* подпункты чуть бледнее */
+.case-toc ol ol a {
+  color: rgba(27, 27, 25, 0.42);
 }
 
 .case-toc a:hover {
@@ -496,10 +496,13 @@ html {
 }
 
 .case-divider {
-  height: 1px;
-  margin: 64px 0 56px;
+  height: 0;
+  margin: 0;
   border: 0;
-  background: var(--line);
+}
+
+.case-content .case-divider + * {
+  margin-top: 40px;
 }
 
 /* ==========================================================
@@ -532,11 +535,13 @@ html {
 }
 
 .case-result .band-body h3 {
-  margin: 0 0 20px;
-  font-size: 1.5rem;
-  letter-spacing: -0.025em;
+  margin: 40px 0 16px;
+  font-size: 0.8125rem;
+  line-height: 1.3;
   font-weight: 600;
-  color: var(--white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lavender);
 }
 
 .decisions {
@@ -799,9 +804,6 @@ body:has(dialog[open]) {
     height: 30px;
   }
 
-  .case-divider {
-    margin: 48px 0 40px;
-  }
 
   .case-result,
   .case-conclusion {
